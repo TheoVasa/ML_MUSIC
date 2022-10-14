@@ -9,10 +9,10 @@ git clone <URL du GIT>
 git add <les dossiers en questions>
 -> une fois que vous avez modifiés les fichiers que vous voulez en gros cest pour les ajouter au prochain commit 
 
-git add -m 
+git add -A
 -> add tout les dossiers modifiés 
 
-git commit -A <nom du commit>
+git commit -m <nom du commit>
 -> vous allez commit tout les dossiers qui ont été add avec la commande précédente dans le commit 
 
 git push 
