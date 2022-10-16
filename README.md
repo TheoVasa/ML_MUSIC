@@ -3,16 +3,16 @@ machine learning project using music datasets
 
 En gros les commandes de base pour ce git ça va être 
 
-git clone <URL du GIT> 
+git clone [URL du GIT]
 -> ca va clone le repertoire qui est en ligne sur votre ordi -> donc tout les fichiers, faites ça au début et au cas ou vous voulez réimporter le projet
 
-git add <les dossiers en questions>
+git add [les dossiers en questions]
 -> une fois que vous avez modifiés les fichiers que vous voulez en gros cest pour les ajouter au prochain commit 
 
 git add -A
 -> add tout les dossiers modifiés 
 
-git commit -m <nom du commit>
+git commit -m [nom du commit]
 -> vous allez commit tout les dossiers qui ont été add avec la commande précédente dans le commit 
 
 git push 
