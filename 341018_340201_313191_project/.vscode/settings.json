@@ -1,0 +1,13 @@
+{
+    "editor.semanticTokenColorCustomizations": {
+        "rules": {
+            "*.deprecated": {
+                "foreground": "#808080",
+                "italic": true
+            }
+        }
+    },
+    "files.watcherExclude": {
+        "**/target": true
+    }
+}
