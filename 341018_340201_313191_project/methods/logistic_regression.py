@@ -32,6 +32,19 @@ class LogisticRegression(object):
             You can either pass these as args or kwargs.
         """
         
+        if "lr" in kwargs:
+            self.lr = kwargs["lr"]
+        elif len(args) >0 :
+            self.lr = args[0]
+        else:
+            self.lr = 1
+
+        if "max_iters" in kwargs:
+            self.max_iters = kwargs["max_iters"]
+        elif len(args) >0 :
+            self.max_iters = args[1]
+        else:
+            self.max_iters = 1
         ##
         ###
         #### YOUR CODE HERE! 
