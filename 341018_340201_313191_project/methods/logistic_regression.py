@@ -16,7 +16,8 @@ class LogisticRegression(object):
             Initialize the task_kind (see dummy_methods.py)
             and call set_arguments function of this class.
         """
-        
+        self.task_kind='classification'
+        self.set_arguments(*args,**kwargs)
         ##
         ###
         #### YOUR CODE HERE! 
@@ -37,6 +38,9 @@ class LogisticRegression(object):
         ###
         ##
        
+    def softmax(data,w):
+        res=np.exp(data@w)/(np.sum(np.exp(data@w),axis=1).reshape((-1, 1)))
+        return res
 
     def fit(self, training_data, training_labels):
         """
@@ -47,7 +51,13 @@ class LogisticRegression(object):
             Returns:
                 pred_labels (np.array): target of shape (N,regression_target_size)
         """
-        
+        training_data2 = self.append_bias_term(training_data)
+        self.w = np.linalg.pinv(training_data2) @ training_labels
+
+        pred_labels=self.classify(training_data)
+
+
+
         
         ##
         ###
@@ -56,6 +66,19 @@ class LogisticRegression(object):
         ##
 
         return pred_labels
+
+    def append_bias_term(X_train):
+        N=X_train.shape[0]
+        ones_column = np.ones((N,1))
+        X_train_bias = np.concatenate((ones_column,X_train),axis=1)
+        return X_train_bias
+
+    def classify(self,data):
+        proba=self.softmax(data,self.w)
+        pred_labels=np.zeros(proba.shape)
+        pred_labels[np.argmax(proba)]=1
+        return pred_labels     
+
 
     def predict(self, test_data):
         """
@@ -66,6 +89,12 @@ class LogisticRegression(object):
             Returns:
                 test_labels (np.array): labels of shape (N,)
         """   
+
+        test_data2=self.append_bias_term(test_data)
+        
+        pred_labels=self.classify(test_data)
+
+
         ##
         ###
         #### YOUR CODE HERE! 
