@@ -17,11 +17,7 @@ class LinearRegression(object):
         """
         self.task_kind='regression'
         self.set_arguments(*args,**kwargs)
-        ##
-        ###
-        #### YOUR CODE HERE! 
-        ###
-        ##
+
 
     def set_arguments(self,*args, **kwargs):
         """
@@ -32,18 +28,11 @@ class LinearRegression(object):
         """
         if "lmda" in kwargs:
             self.lmda = kwargs["lmda"]
-        elif len(args) >0 :
+        elif len(args) > 0:
             self.lmda = args[0]
         else:
-            self.lmda = 1
+            self.lmda = 0
 
-
-        ##
-        ###
-        #### YOUR CODE HERE! 
-        ###
-        ##
-    
 
     def fit(self, training_data, training_labels):
         """
@@ -54,22 +43,12 @@ class LinearRegression(object):
             Returns:
                 pred_regression_targets (np.array): predicted target of shape (N,regression_target_size)
         """
-        training_data2 = self.append_bias_term(training_data)
-        self.w = np.linalg.pinv(training_data2) @ training_labels
-        pred_regression_targets = np.dot(training_data2,self.w)
-        ##
-        ###
-        #### YOUR CODE HERE! 
-        ###
-        ##
+        self.w = np.linalg.pinv(training_data) @ training_labels
+        pred_regression_targets = np.dot(training_data,self.w)
 
         return pred_regression_targets
 
-    def append_bias_term(self,X_train):
-        N=X_train.shape[0]
-        ones_column = np.ones((N,1))
-        X_train_bias = np.concatenate((ones_column,X_train),axis=1)
-        return X_train_bias    
+  
 
     def predict(self, test_data):
         """
@@ -81,13 +60,6 @@ class LinearRegression(object):
                 pred_regression_targets (np.array): predicted targets of shape (N,regression_target_size)
         """   
 
-        test_data2=self.append_bias_term(test_data)
-        pred_regression_targets=np.dot(test_data2,self.w)
-
-        ##
-        ###
-        #### YOUR CODE HERE! 
-        ###
-        ##
+        pred_regression_targets=np.dot(test_data,self.w)
 
         return pred_regression_targets

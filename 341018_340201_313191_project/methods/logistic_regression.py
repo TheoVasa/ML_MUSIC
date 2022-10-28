@@ -73,6 +73,8 @@ class LogisticRegression(object):
         training_data2 = self.append_bias_term(training_data)
         self.w = np.linalg.pinv(training_data2) @ label_to_onehot(training_labels)
 
+        
+
         #W needs to be a matrix with the columns being the number of classes
 
         pred_labels=self.classify(training_data2)
