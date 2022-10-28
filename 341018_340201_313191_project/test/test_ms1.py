@@ -199,7 +199,7 @@ if __name__ == '__main__':
     parser = ArgumentParser()
     parser.add_argument('-p', '--project-path', help='Path to the project folder', required=True)
     args = parser.parse_args()
-    
+    print(args.project_path)
     project_path = Path(args.project_path)
 
     if re.match(r'^((\d{6})_){3}project$', project_path.name) is None:

@@ -65,7 +65,7 @@ class LinearRegression(object):
 
         return pred_regression_targets
 
-    def append_bias_term(X_train):
+    def append_bias_term(self,X_train):
         N=X_train.shape[0]
         ones_column = np.ones((N,1))
         X_train_bias = np.concatenate((ones_column,X_train),axis=1)

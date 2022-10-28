@@ -51,8 +51,14 @@ class LogisticRegression(object):
         ###
         ##
        
-    def softmax(data,w):
-        res=np.exp(data@w)/(np.sum(np.exp(data@w),axis=1).reshape((-1, 1)))
+    def softmax(self,data):
+        #Modifié, à faire sur papier
+        print(data.shape)
+        print(self.w.shape)
+        exp=np.exp(data@self.w)
+        sum=np.sum(exp,axis=1)
+        reshapedsum=sum.reshape((-1, 1))
+        res=exp/reshapedsum
         return res
 
     def fit(self, training_data, training_labels):
@@ -65,9 +71,11 @@ class LogisticRegression(object):
                 pred_labels (np.array): target of shape (N,regression_target_size)
         """
         training_data2 = self.append_bias_term(training_data)
-        self.w = np.linalg.pinv(training_data2) @ training_labels
+        self.w = np.linalg.pinv(training_data2) @ label_to_onehot(training_labels)
 
-        pred_labels=self.classify(training_data)
+        #W needs to be a matrix with the columns being the number of classes
+
+        pred_labels=self.classify(training_data2)
 
 
 
@@ -80,17 +88,19 @@ class LogisticRegression(object):
 
         return pred_labels
 
-    def append_bias_term(X_train):
+    def append_bias_term(self,X_train):
         N=X_train.shape[0]
         ones_column = np.ones((N,1))
         X_train_bias = np.concatenate((ones_column,X_train),axis=1)
         return X_train_bias
 
     def classify(self,data):
-        proba=self.softmax(data,self.w)
+        proba=self.softmax(data)
         pred_labels=np.zeros(proba.shape)
-        pred_labels[np.argmax(proba)]=1
-        return pred_labels     
+        #Rajouté axis=1, à vérifier sur papier
+        pred_labels[np.argmax(proba,axis=1)]=1
+        return pred_labels
+             
 
 
     def predict(self, test_data):
@@ -115,3 +125,7 @@ class LogisticRegression(object):
         ##
 
         return pred_labels
+
+        #Comment on teste? Qu'est-ce qu'il faut avoir codé correctement pour que les tests fonctionnent?
+        #Est-ce qu'on doit implémenter ridge regression alors qu'on l'a pas encore vu en cours?
+        #Est-ce que 
