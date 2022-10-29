@@ -61,6 +61,7 @@ def cross_validation(method_obj=None, search_arg_name=None, search_arg_vals=[], 
 
         acc_list2 = []
         for fold in range(k_fold):
+            break
             
                     
             ##
@@ -75,6 +76,7 @@ def cross_validation(method_obj=None, search_arg_name=None, search_arg_vals=[], 
         #### YOUR CODE HERE! 
         ###
         ##
+        break
      
     ##
     ###

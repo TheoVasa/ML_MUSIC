@@ -11,6 +11,9 @@ class LogisticRegression(object):
         But make sure that __init__, set_arguments, fit and predict work correctly.
     """
 
+    #----------------------------------------------------------------------------------------
+    ################################## PRINCIPAL METHODS ####################################
+    #----------------------------------------------------------------------------------------
     def __init__(self, *args, **kwargs):
         """
             Initialize the task_kind (see dummy_methods.py)
@@ -18,12 +21,7 @@ class LogisticRegression(object):
         """
         self.task_kind='classification'
         self.set_arguments(*args,**kwargs)
-        ##
-        ###
-        #### YOUR CODE HERE! 
-        ###
-        ##
-
+    #----------------------------------------------------------------------------------------
     def set_arguments(self, *args, **kwargs):
         """
             args and kwargs are super easy to use! See dummy_methods.py
@@ -31,80 +29,40 @@ class LogisticRegression(object):
             and the number of max iterations (max_iters)
             You can either pass these as args or kwargs.
         """
-        
+
+        #setting the rate for logistic
         if "lr" in kwargs:
             self.lr = kwargs["lr"]
-        elif len(args) >0 :
-            self.lr = args[0]
         else:
-            self.lr = 1
+            self.lr = 0.0001
 
+        #setting the max of iterations for logistic 
         if "max_iters" in kwargs:
             self.max_iters = kwargs["max_iters"]
-        elif len(args) >0 :
-            self.max_iters = args[1]
         else:
-            self.max_iters = 1
-        ##
-        ###
-        #### YOUR CODE HERE! 
-        ###
-        ##
-       
-    def softmax(self,data):
-        #Modifié, à faire sur papier
-        print(data.shape)
-        print(self.w.shape)
-        exp=np.exp(data@self.w)
-        sum=np.sum(exp,axis=1)
-        reshapedsum=sum.reshape((-1, 1))
-        res=exp/reshapedsum
-        return res
-
+            self.max_iters = 20
+        
+        #setting the number of classes for classification
+        if "nbr_classes" in kwargs: 
+            self.nbr_classes = kwargs["nbr_classes"]
+        else: 
+            self.nbr_classes = 3
+    #----------------------------------------------------------------------------------------
     def fit(self, training_data, training_labels):
         """
             Trains the model, returns predicted labels for training data.
             Arguments:
                 training_data (np.array): training data of shape (N,D)
-                training_labels (np.array): regression target of shape (N,regression_target_size)
+                training_labels (np.array): regression target of shape (N,)
             Returns:
-                pred_labels (np.array): target of shape (N,regression_target_size)
+                pred_labels (np.array): target of shape (N,)
         """
-        training_data2 = self.append_bias_term(training_data)
-        self.w = np.linalg.pinv(training_data2) @ label_to_onehot(training_labels)
 
-        
-
-        #W needs to be a matrix with the columns being the number of classes
-
-        pred_labels=self.classify(training_data2)
-
-
-
-        
-        ##
-        ###
-        #### YOUR CODE HERE! 
-        ###
-        ##
-
-        return pred_labels
-
-    def append_bias_term(self,X_train):
-        N=X_train.shape[0]
-        ones_column = np.ones((N,1))
-        X_train_bias = np.concatenate((ones_column,X_train),axis=1)
-        return X_train_bias
-
-    def classify(self,data):
-        proba=self.softmax(data)
-        pred_labels=np.zeros(proba.shape)
-        #Rajouté axis=1, à vérifier sur papier
-        pred_labels[np.argmax(proba,axis=1)]=1
-        return pred_labels
-             
-
-
+        #training the data / optimizing the weights 
+        self.w = self.logistic_regression_train_multi(training_data, training_labels, self.max_iters, self.lr)
+        #prediction on the training data 
+        return self.logistic_regression_classify_multi(training_data, self.w)
+     #----------------------------------------------------------------------------------------
     def predict(self, test_data):
         """
             Runs prediction on the test data.
@@ -113,21 +71,111 @@ class LogisticRegression(object):
                 test_data (np.array): test data of shape (N,D)
             Returns:
                 test_labels (np.array): labels of shape (N,)
-        """   
+        """    
 
-        test_data2=self.append_bias_term(test_data)
+        return self.logistic_regression_classify_multi(test_data, self.w)
+    #----------------------------------------------------------------------------------------
+    ################################### INTERNALS HELPERS METHODS ###########################
+    #----------------------------------------------------------------------------------------  
+    def f_softmax(self,data,w):
+        """ Softmax function
+        Args:
+            data (np.array): Input data of shape (N, D)
+            w (np.array): Weights of shape (D, C) where C is # of classes
+            
+        Returns:
+            res (np.array): Probabilites of shape (N, C), where each value is in 
+                range [0, 1] and each row sums to 1.
+        """
+
+        weighted_mat = np.vectorize(np.exp)(data @ w) 
+        sum_mat = np.sum(weighted_mat, axis=1)
+        for i in range(weighted_mat.shape[0]):
+            for j in range(weighted_mat.shape[1]):
+                weighted_mat[i,j] = weighted_mat[i,j] / sum_mat[i]
+        return weighted_mat
+    #----------------------------------------------------------------------------------------
+    def sigmoid(self, t):
+        """ Sigmoid function
         
-        pred_labels=self.classify(test_data)
+        Args:
+            t (np.array): Input data of shape (N, )
+            
+        Returns:
+            res (np.array): Probabilites of shape (N, ), where each value is in [0, 1].
+        """
+        
+        return 1/(1 + np.exp(-t))
+    #----------------------------------------------------------------------------------------
+    def gradient_logistic_multi(self, data, labels, w):
+        """ Logistic regression gradient function for binary classes
+        
+        Args:
+            data (np.array): Dataset of shape (N, D).
+            labels (np.array): Labels of shape (N, C).
+            w (np.array): Weights of logistic regression model of shape (D, C)
+        Returns:
+            grad (np. array): Gradient array of shape (D, C)
+        """
 
+        return data.T @ (self.f_softmax(data, w) - labels)
 
-        ##
-        ###
-        #### YOUR CODE HERE! 
-        ###
-        ##
+    #----------------------------------------------------------------------------------------
+    def logistic_regression_train_multi(self, data, labels, k=16, max_iters=10, lr=0.001):
+        """ Classification function for multi class logistic regression. 
+        
+        Args:
+            data (np.array): Dataset of shape (N, D).
+            labels (np.array): Labels of shape (N, )
+            max_iters (integer): Maximum number of iterations. Default:10
+            lr (integer): The learning rate of  the gradient step. Default:0.001
 
-        return pred_labels
+        Returns:
+            np. array: trained weights of shape of shape (D, C).
+        """
+        #putting labels in onehot
+        one_hot_labels = np.zeros([labels.shape[0], self.nbr_classes])
+        one_hot_labels[np.arange(labels.shape[0]), labels.astype(np.int)] = 1
+        labels = one_hot_labels
+        weights = np.random.normal(0, 0.1, [data.shape[1], self.nbr_classes])
+        for it in range(self.max_iters):
+            #update the weights
+            weights = weights - self.lr * self.gradient_logistic_multi(data, labels, weights)
+            predictions = self.logistic_regression_classify_multi(data, weights)
+            #stop if we get 100%
+            if self.accuracy_fn(self.onehot_to_label(labels), predictions) == 1:
+                break
+        
+        return weights
+    #----------------------------------------------------------------------------------------
+    def logistic_regression_classify_multi(self, data, w):
+        """ Classification function for multi class logistic regression. 
+        
+        Args:
+            data (np.array): Dataset of shape (N, D).
+            w (np.array): Weights of logistic regression model of shape (D, C)
+        Returns:
+            predictions (np.array): Label assignments of data of shape (N, ) (NOT one-hot!).
+        """
 
-        #Comment on teste? Qu'est-ce qu'il faut avoir codé correctement pour que les tests fonctionnent?
-        #Est-ce qu'on doit implémenter ridge regression alors qu'on l'a pas encore vu en cours?
-        #Est-ce que 
+        # find predictions, argmax to find the correct label
+        return self.onehot_to_label(self.f_softmax(data, w))
+    #----------------------------------------------------------------------------------------
+    def accuracy_fn(self, labels_gt, labels_pred):
+        """ Computes accuracy.
+        
+        Args:
+            labels_gt (np.array): GT labels of shape (N, ).
+            labels_pred (np.array): Predicted labels of shape (N, ).
+            
+        Returns:
+            acc (float): Accuracy, in range [0, 1].
+        """
+
+        np.sum(np.abs(labels_gt - labels_pred)==0)
+        return np.sum(labels_gt == labels_pred) / labels_gt.shape[0]
+    #----------------------------------------------------------------------------------------
+    def onehot_to_label(self, onehot):
+        return np.argmax(onehot, axis=1)
+    #----------------------------------------------------------------------------------------
+    #########################################################################################

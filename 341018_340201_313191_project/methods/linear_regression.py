@@ -10,6 +10,9 @@ class LinearRegression(object):
         But make sure that __init__, set_arguments, fit and predict work correctly.
     """
 
+    #----------------------------------------------------------------------------------------
+    ################################## PRINCIPAL METHODS ####################################
+    #----------------------------------------------------------------------------------------
     def __init__(self, *args, **kwargs):
         """
             Initialize the task_kind (see dummy_methods.py)
@@ -17,8 +20,7 @@ class LinearRegression(object):
         """
         self.task_kind='regression'
         self.set_arguments(*args,**kwargs)
-
-
+    #----------------------------------------------------------------------------------------
     def set_arguments(self,*args, **kwargs):
         """
             args and kwargs are super easy to use! See dummy_methods.py
@@ -28,12 +30,11 @@ class LinearRegression(object):
         """
         if "lmda" in kwargs:
             self.lmda = kwargs["lmda"]
-        elif len(args) > 0:
+        elif len(args) >0 :
             self.lmda = args[0]
         else:
-            self.lmda = 0
-
-
+            self.lmda = 1
+    #----------------------------------------------------------------------------------------
     def fit(self, training_data, training_labels):
         """
             Trains the model, returns predicted labels for training data.
@@ -43,13 +44,11 @@ class LinearRegression(object):
             Returns:
                 pred_regression_targets (np.array): predicted target of shape (N,regression_target_size)
         """
+        #TODO adap with ridge regression (lambda)
         self.w = np.linalg.pinv(training_data) @ training_labels
         pred_regression_targets = np.dot(training_data,self.w)
-
         return pred_regression_targets
-
-  
-
+    #----------------------------------------------------------------------------------------    
     def predict(self, test_data):
         """
             Runs prediction on the test data.
@@ -59,7 +58,5 @@ class LinearRegression(object):
             Returns:
                 pred_regression_targets (np.array): predicted targets of shape (N,regression_target_size)
         """   
-
         pred_regression_targets=np.dot(test_data,self.w)
-
         return pred_regression_targets

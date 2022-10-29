@@ -15,6 +15,17 @@ from methods.dummy_methods import DummyClassifier, DummyRegressor
 from methods.logistic_regression import LogisticRegression
 from methods.linear_regression import LinearRegression
 
+#----------------------------------------------------------------------------------------
+############################### EXTERNAL METHODS ########################################
+#----------------------------------------------------------------------------------------
+def append_bias_term(X_train):
+    ones_column = np.ones((X_train.shape[0], 1))
+    X_train_bias = np.concatenate([X_train, ones_column], axis=1)
+    return X_train_bias
+#----------------------------------------------------------------------------------------
+#########################################################################################
+#----------------------------------------------------------------------------------------
+
 def main(args):
     # First we create all of our dataset objects. The dataset objects store the data, labels (for classification) and the targets for regression
     if args.dataset=="h36m":
@@ -75,23 +86,46 @@ def main(args):
     # we show how to create the objects for DummyClassifier and DummyRegressor
     # the rest of the methods are up to you!
     else:
-        if args.method_name == "dummy_classifier":
-            method_obj =  DummyClassifier()
-            search_arg_vals = [1,2,3]
-            search_arg_name = "dummy_arg"        
-        elif args.method_name == 'dummy_regressor':
-            method_obj = DummyRegressor()
-            search_arg_vals = [1,2,3] 
-            train_labels = train_regression_target   
-            search_arg_name = "dummy_arg"        
-        
-        ##
-        ###
-        #### YOUR CODE HERE! 
-        ###
-        ##
+        #I think is working fine acc = 77% / macro f1 = 0.6 (WITHOUT CROSS-VALIDATION)
+        if args.method_name == "logistic_regression":
+            method_obj =  LogisticRegression(lr=args.lr, max_iters=args.max_iters, nbr_classes=3)
 
-        # cross validation (MS1)
+            #the output is classification 
+            output_training_target = train_labels
+
+            #TODO use with cross validation 
+            """
+            search_arg_vals = [1,2,3]
+            search_arg_name = "dummy_arg"     
+            """  
+        #working fine LOSS(MSE)=0.45 !
+        elif args.method_name == 'linear_regression':
+            method_obj = LinearRegression()
+            #append bias term (not mandatory, they didn't used it)
+            """"
+            train_data = append_bias_term(train_data)
+            test_data = append_bias_term(test_data)
+            """
+      
+            #the output is regression (rating)
+            output_training_target = train_regression_target   
+
+        elif args.method_name == 'ridge_regression':  
+            method_obj = LinearRegression(lmda=args.ridge_regression_lmda)
+            #append bias term (not mandatory, they didn't used it)
+            train_data = append_bias_term(train_data)
+            test_data = append_bias_term(test_data)
+
+            #the output is regression (rating)
+            train_labels = train_regression_target 
+
+            #TODO use with cross validation   
+            """
+            search_arg_vals = [1,2,3]
+            search_arg_name = "dummy_arg"     
+            """    
+
+        # TODO cross validation (MS1)
         if args.use_cross_validation:
             print("Using cross validation")
             best_arg, best_val_acc = cross_validation(method_obj=method_obj, search_arg_name=search_arg_name, search_arg_vals=search_arg_vals, data=train_data, labels=train_labels, k_fold=4)
@@ -99,7 +133,7 @@ def main(args):
             method_obj.set_arguments(best_arg)
 
         # FIT AND PREDICT:
-        method_obj.fit(train_data, train_labels)
+        method_obj.fit(train_data, output_training_target)
         pred_labels = method_obj.predict(test_data)
         # Report test results
         if method_obj.task_kind == 'regression':
@@ -130,3 +164,5 @@ if __name__ == '__main__':
     parser.add_argument('--use_pca', action="store_true", help="to enable PCA")
     args = parser.parse_args()
     main(args)
+
+
