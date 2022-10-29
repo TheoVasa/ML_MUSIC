@@ -135,7 +135,7 @@ class LogisticRegression(object):
         """
         #putting labels in onehot
         one_hot_labels = np.zeros([labels.shape[0], self.nbr_classes])
-        one_hot_labels[np.arange(labels.shape[0]), labels.astype(np.int)] = 1
+        one_hot_labels[np.arange(labels.shape[0]), labels.astype(int)] = 1
         labels = one_hot_labels
         weights = np.random.normal(0, 0.1, [data.shape[1], self.nbr_classes])
         for it in range(self.max_iters):
