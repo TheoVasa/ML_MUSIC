@@ -16,7 +16,8 @@ RIDGE REGRESSION: we tried to add a bias term to increase our results
 |-> SCORE WITHOUT BIAS: loss = ??? 
 |-> CONCLUSION: We see that the appending of the bias term (???)
 
-CROSS VALIDATION: ??? 
+CROSS VALIDATION: ???
+ 
 
 
 
