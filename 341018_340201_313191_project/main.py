@@ -113,11 +113,11 @@ def main(args):
         elif args.method_name == 'ridge_regression':  
             method_obj = LinearRegression(lmda=args.ridge_regression_lmda)
             #append bias term (not mandatory, they didn't used it)
-            train_data = append_bias_term(train_data)
-            test_data = append_bias_term(test_data)
+            # train_data = append_bias_term(train_data)
+            # test_data = append_bias_term(test_data)
 
             #the output is regression (rating)
-            train_labels = train_regression_target 
+            output_training_target = train_labels
 
             #TODO use with cross validation   
             """

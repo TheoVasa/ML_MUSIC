@@ -1,0 +1,9 @@
+1666971788528:python test/test_ms1.py -p /Users/albertfares/ML_MUSIC/341018_340201_313191_project
+1666971800472:test/test_ms1.py -p /Users/albertfares/ML_MUSIC/341018_340201_313191_project
+1666971812282:test/test_ms1.py
+1666971815593:test
+1666971834708:test/test_ms1.py
+1666971851496:test_ms1.py
+1666971900545:test
+1666971931848:python test_ms1.py -p /Users/albertfares/ML_MUSIC/341018_340201_313191_project
+1666977543075:python main.py --dataset="h36m" --path_to_data=/Users/albertfares/Library/Mobile Documents/com~apple~CloudDocs/fma_data --method_name="dummy_classifier" --use_cross_validation
