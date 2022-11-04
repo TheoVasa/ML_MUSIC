@@ -14,13 +14,19 @@ def splitting_fn(data, labels, indices, fold_size, fold):
         Returns:
             train_data, train_label, val_data, val_label (np. arrays): split training and validation sets
     """
-                
-    ##
-    ###
-    #### YOUR CODE HERE! 
-    ###
-    ##
+    index=fold*fold_size
+    mask=np.ones(data.shape[0],dtype=bool)
+    mask[index:(index+fold_size)]=False
+    train_indices=indices[mask]
+    val_indices=indices[~mask]
 
+    mask=np.ones(data.shape[0],dtype=bool)
+    mask[val_indices]=False
+    train_data=data[mask]
+    train_label=labels[mask]
+    val_data=data[~mask]
+    val_label=labels[~mask]
+    
     return train_data, train_label, val_data, val_label
 
 def cross_validation(method_obj=None, search_arg_name=None, search_arg_vals=[], data=None, labels=None, k_fold=4):
