@@ -88,7 +88,8 @@ class LogisticRegression(object):
                 range [0, 1] and each row sums to 1.
         """
 
-        weighted_mat = np.vectorize(np.exp)(data @ w) 
+        #weighted_mat = np.vectorize(np.exp)(data @ w)
+        weighted_mat=np.exp(data@w) 
         sum_mat = np.sum(weighted_mat, axis=1)
         for i in range(weighted_mat.shape[0]):
             for j in range(weighted_mat.shape[1]):
