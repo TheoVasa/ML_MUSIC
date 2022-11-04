@@ -44,8 +44,7 @@ class LinearRegression(object):
             Returns:
                 pred_regression_targets (np.array): predicted target of shape (N,regression_target_size)
         """
-        #TODO adap with ridge regression (lambda)
-        # self.w = np.linalg.pinv(training_data) @ training_labels
+
         inverse = np.linalg.inv(np.transpose(training_data)@training_data + (self.lmda*np.identity(training_data.shape[1])))
         self.w = inverse@(np.transpose(training_data)@training_labels)
         pred_regression_targets = np.dot(training_data,self.w)
