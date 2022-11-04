@@ -33,7 +33,7 @@ class LinearRegression(object):
         elif len(args) >0 :
             self.lmda = args[0]
         else:
-            self.lmda = 1
+            self.lmda = 0
     #----------------------------------------------------------------------------------------
     def fit(self, training_data, training_labels):
         """
@@ -45,17 +45,9 @@ class LinearRegression(object):
                 pred_regression_targets (np.array): predicted target of shape (N,regression_target_size)
         """
         #TODO adap with ridge regression (lambda)
-<<<<<<< HEAD
         # self.w = np.linalg.pinv(training_data) @ training_labels
         inverse = np.linalg.inv(np.transpose(training_data)@training_data + (self.lmda*np.identity(training_data.shape[1])))
         self.w = inverse@(np.transpose(training_data)@training_labels)
-=======
-        
-
-
-
-        self.w = np.linalg.pinv(training_data) @ training_labels
->>>>>>> 71c47450b61c06351b36c22025ce3b69865ccd88
         pred_regression_targets = np.dot(training_data,self.w)
         return pred_regression_targets
     #----------------------------------------------------------------------------------------    

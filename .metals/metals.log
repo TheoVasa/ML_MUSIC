@@ -22,3 +22,31 @@
 2022.11.04 08:14:39 INFO  skipping build import with status 'Cancelled'
 Nov 04, 2022 8:46:56 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFO: Unsupported notification method: $/setTrace
+2022.11.04 10:04:05 INFO  shutting down Metals
+2022.11.04 10:04:16 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/albertfares/ML_MUSIC/.metals/lsp.trace.json or /Users/albertfares/Library/Caches/org.scalameta.metals/lsp.trace.json
+2022.11.04 10:04:16 INFO  logging to file /Users/albertfares/ML_MUSIC/.metals/metals.log
+2022.11.04 10:04:16 INFO  Started: Metals version 0.11.9 in workspace '/Users/albertfares/ML_MUSIC' for client Visual Studio Code 1.71.2.
+2022.11.04 10:04:17 INFO  time: initialize in 0.62s
+2022.11.04 10:04:18 WARN  Build server is not auto-connectable.
+2022.11.04 10:04:17 INFO  skipping build import with status 'Cancelled'
+2022.11.04 10:16:56 INFO  shutting down Metals
+2022.11.04 10:18:27 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/albertfares/ML_MUSIC/.metals/lsp.trace.json or /Users/albertfares/Library/Caches/org.scalameta.metals/lsp.trace.json
+2022.11.04 10:18:27 INFO  logging to file /Users/albertfares/ML_MUSIC/.metals/metals.log
+2022.11.04 10:18:27 INFO  Started: Metals version 0.11.9 in workspace '/Users/albertfares/ML_MUSIC' for client Visual Studio Code 1.71.2.
+2022.11.04 10:18:28 INFO  time: initialize in 0.66s
+2022.11.04 10:18:29 WARN  Build server is not auto-connectable.
+2022.11.04 10:18:28 INFO  skipping build import with status 'Cancelled'
+2022.11.04 10:19:22 INFO  shutting down Metals
+2022.11.04 13:24:23 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/albertfares/ML_MUSIC/.metals/lsp.trace.json or /Users/albertfares/Library/Caches/org.scalameta.metals/lsp.trace.json
+2022.11.04 13:24:23 INFO  logging to file /Users/albertfares/ML_MUSIC/.metals/metals.log
+2022.11.04 13:24:23 INFO  Started: Metals version 0.11.9 in workspace '/Users/albertfares/ML_MUSIC' for client Visual Studio Code 1.71.2.
+2022.11.04 13:24:24 INFO  time: initialize in 0.69s
+2022.11.04 13:24:25 WARN  Build server is not auto-connectable.
+2022.11.04 13:24:25 INFO  skipping build import with status 'Cancelled'
+2022.11.04 13:24:32 INFO  shutting down Metals
+2022.11.04 17:27:10 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/albertfares/ML_MUSIC/.metals/lsp.trace.json or /Users/albertfares/Library/Caches/org.scalameta.metals/lsp.trace.json
+2022.11.04 17:27:10 INFO  logging to file /Users/albertfares/ML_MUSIC/.metals/metals.log
+2022.11.04 17:27:10 INFO  Started: Metals version 0.11.9 in workspace '/Users/albertfares/ML_MUSIC' for client Visual Studio Code 1.71.2.
+2022.11.04 17:27:11 INFO  time: initialize in 0.66s
+2022.11.04 17:27:12 WARN  Build server is not auto-connectable.
+2022.11.04 17:27:12 INFO  skipping build import with status 'Cancelled'

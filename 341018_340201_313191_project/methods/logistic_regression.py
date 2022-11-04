@@ -95,18 +95,7 @@ class LogisticRegression(object):
             for j in range(weighted_mat.shape[1]):
                 weighted_mat[i,j] = weighted_mat[i,j] / sum_mat[i]
         return weighted_mat
-    #----------------------------------------------------------------------------------------
-    def sigmoid(self, t):
-        """ Sigmoid function
         
-        Args:
-            t (np.array): Input data of shape (N, )
-            
-        Returns:
-            res (np.array): Probabilites of shape (N, ), where each value is in [0, 1].
-        """
-        
-        return 1/(1 + np.exp(-t))
     #----------------------------------------------------------------------------------------
     def gradient_logistic_multi(self, data, labels, w):
         """ Logistic regression gradient function for binary classes

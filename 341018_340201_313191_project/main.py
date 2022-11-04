@@ -117,7 +117,7 @@ def main(args):
             # test_data = append_bias_term(test_data)
 
             #the output is regression (rating)
-            output_training_target = train_labels
+            output_training_target = train_regression_target
 
             #TODO use with cross validation   
             """
