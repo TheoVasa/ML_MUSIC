@@ -50,3 +50,9 @@ INFO: Unsupported notification method: $/setTrace
 2022.11.04 17:27:11 INFO  time: initialize in 0.66s
 2022.11.04 17:27:12 WARN  Build server is not auto-connectable.
 2022.11.04 17:27:12 INFO  skipping build import with status 'Cancelled'
+2022.11.05 15:49:36 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\assel\ML_MUSIC\.metals\lsp.trace.json or C:\Users\assel\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.11.05 15:49:38 INFO  logging to file C:\Users\assel\ML_MUSIC\.metals\metals.log
+2022.11.05 15:49:38 INFO  Started: Metals version 0.11.9 in workspace 'C:\Users\assel\ML_MUSIC' for client Visual Studio Code 1.73.0.
+2022.11.05 15:49:43 INFO  time: initialize in 5.5s
+2022.11.05 15:49:45 WARN  Build server is not auto-connectable.
+2022.11.05 16:46:13 INFO  shutting down Metals
