@@ -10,7 +10,9 @@ class LogisticRegression(object):
         Feel free to add more functions to this class if you need.
         But make sure that __init__, set_arguments, fit and predict work correctly.
     """
-
+    #to not reset other args when calling set arguments again 
+    max_iters_set = False 
+    lr_set = False
     #----------------------------------------------------------------------------------------
     ################################## PRINCIPAL METHODS ####################################
     #----------------------------------------------------------------------------------------
@@ -33,14 +35,18 @@ class LogisticRegression(object):
         #setting the rate for logistic
         if "lr" in kwargs:
             self.lr = kwargs["lr"]
-        else:
+            self.lr_set = True
+        elif not self.lr_set:
             self.lr = 0.0001
+            self.lr_set = True
 
         #setting the max of iterations for logistic 
-        if "max_iters" in kwargs:
+        if "max_iters" in kwargs :
             self.max_iters = kwargs["max_iters"]
-        else:
+            self.max_iters_set = True
+        elif not self.max_iters_set:
             self.max_iters = 20
+            self.max_iters_set = True 
         
         #setting the number of classes for classification
         if "nbr_classes" in kwargs: 
@@ -128,7 +134,7 @@ class LogisticRegression(object):
         one_hot_labels[np.arange(labels.shape[0]), labels.astype(int)] = 1
         labels = one_hot_labels
         weights = np.random.normal(0, 0.1, [data.shape[1], self.nbr_classes])
-        for it in range(self.max_iters):
+        for it in range(int(self.max_iters)):
             #update the weights
             weights = weights - self.lr * self.gradient_logistic_multi(data, labels, weights)
             predictions = self.logistic_regression_classify_multi(data, weights)

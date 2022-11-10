@@ -52,47 +52,38 @@ def cross_validation(method_obj=None, search_arg_name=None, search_arg_vals=[], 
     ## kind of task.
     metric = mse_fn if method_obj.task_kind == 'regression' else macrof1_fn
     find_param_ops = np.argmin if method_obj.task_kind == 'regression' else np.argmax
-
+    #preparing splitting of the data 
     N = data.shape[0]
     indices = np.arange(N)
     np.random.shuffle(indices)
     fold_size = N//k_fold
 
-    acc_list1 = []
+    #setting the list of accuracy for each hyperparameter(s)
+    acc_by_param = []
 
     for arg in search_arg_vals:
+        #set argument(s)
         arg_dict = {search_arg_name: arg}
-        # this is just a way of giving an argument 
-        # (example: for DummyClassifier, this is "dummy_arg":1)
         method_obj.set_arguments(**arg_dict)
-
-        acc_list2 = []
+        #setting the list of accuracy for each folds 
+        acc_by_folds = []
         for fold in range(k_fold):
-            N=data.shape[0]
-            train_data,train_label,val_data,val_label=splitting_fn(data,labels,indices,fold_size,fold)
-            train_pred=method_obj.fit(train_data,train_label)
-            val_pred=method_obj.predict(val_data)
+            #split into train and validation data depending of the current fold 
+            train_data,train_label,val_data,val_label = splitting_fn(data,labels,indices,fold_size,fold)
+            #train the data
+            method_obj.fit(train_data,train_label)
+            #test the accuracy of this prediction 
+            val_pred = method_obj.predict(val_data)
             measure=metric(val_pred,val_label)
-            acc_list2.append(measure)
-
-            
-                    
-            
-        acc_list1.append(np.mean(acc_list2))
+            acc_by_folds.append(measure)
         
-
-    best_index=find_param_ops(acc_list1)
-
-    best_hyperparam=search_arg_vals[best_index]
-
-    best_acc=acc_list1[best_index]    
+        acc_by_param.append(np.mean(acc_by_folds))
+        
+    #deducting the best hyperparameter(s)
+    best_index = find_param_ops(acc_by_param)
+    best_hyperparam = search_arg_vals[best_index]
+    best_acc=acc_by_param[best_index]    
          
-       
-        
-     
-    
-
-
     return best_hyperparam, best_acc
 
         

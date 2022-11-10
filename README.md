@@ -28,3 +28,21 @@ IMPORTANT: faites dans l'ordre -> MODIFIER/ADD/COMMIT/PULL/PUSH quand vous voule
 
 si jamais le manuel de git est super utile https://git-scm.com/docs/user-manual
 
+------------------------------------ USEFUL COMMANDS FOR COMPILING ---------------------------------------------
+
+#logistic regression
+python main.py --dataset="music" --path_to_data=<where you placed the data folder> --method_name="logistic_regression"
+
+#logistic regression with cross validation
+python main.py --dataset="music" --path_to_data=<where you placed the data folder> --method_name="logistic_regression" --use_cross_validation
+
+#ridge regression with 0.1 lambda
+python main.py --dataset="music" --path_to_data=<where you placed the data folder> --method_name="ridge_regression" --ridge_regression_lmda =0.1
+
+#ridge regression with 0 lambda (linear regression)
+python main.py --dataset="music" --path_to_data=<where you placed the data folder> --method_name="ridge_regression" --ridge_regression_lmda =0
+
+#ridge regression with cross validation
+python main.py --dataset="music" --path_to_data=<where you placed the data folder> --method_name="ridge_regression" --use_cross_validation
+
+

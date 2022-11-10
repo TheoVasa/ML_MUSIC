@@ -86,19 +86,22 @@ def main(args):
     # we show how to create the objects for DummyClassifier and DummyRegressor
     # the rest of the methods are up to you!
     else:
-        #I think is working fine acc = 77% / macro f1 = 0.6 (WITHOUT CROSS-VALIDATION)
         if args.method_name == "logistic_regression":
-            method_obj =  LogisticRegression(lr=args.lr, max_iters=args.max_iters, nbr_classes=3)
+            if args.use_cross_validation:
+                #don't enter specific hyperparameters 
+                method_obj =  LogisticRegression(lr=args.lr, max_iters=args.max_iters, nbr_classes=3)
+                #use with cross validation              
+                search_arg_vals = np.arange(args.start_range, args.end_range, args.step_range)
+                #change depending of which hyperparameter perform cross validation
+                search_arg_name = "max_iters"
+                #search_arg_name = "lr"     
+            else :
+                #enter the parameters 
+                method_obj =  LogisticRegression(lr=args.lr, max_iters=args.max_iters, nbr_classes=3)
 
             #the output is classification 
             output_training_target = train_labels
 
-            #TODO use with cross validation 
-            """
-            search_arg_vals = [1,2,3]
-            search_arg_name = "dummy_arg"     
-            """  
-        #working fine LOSS(MSE)=0.45 !
         elif args.method_name == 'linear_regression':
             method_obj = LinearRegression()
             #append bias term (not mandatory, they didn't used it)
@@ -111,26 +114,30 @@ def main(args):
             output_training_target = train_regression_target   
 
         elif args.method_name == 'ridge_regression':  
-            method_obj = LinearRegression(lmda=args.ridge_regression_lmda)
+            if args.use_cross_validation:
+                #don't enter specific hyperparameters 
+                method_obj = LinearRegression()
+                #use with cross validation      
+                search_arg_vals = np.arange(args.start_range, args.end_range, args.step_range)
+                search_arg_name = "lmda"     
+            else : 
+                method_obj = LinearRegression(lmda=args.ridge_regression_lmda)
+
             #append bias term (not mandatory, they didn't used it)
-            # train_data = append_bias_term(train_data)
-            # test_data = append_bias_term(test_data)
+            train_data = append_bias_term(train_data)
+            test_data = append_bias_term(test_data)
 
             #the output is regression (rating)
-            output_training_target = train_regression_target
+            output_training_target = train_regression_target   
 
-            #TODO use with cross validation   
-            """
-            search_arg_vals = [1,2,3]
-            search_arg_name = "dummy_arg"     
-            """    
-
-        # TODO cross validation (MS1)
+        # cross validation (MS1)
         if args.use_cross_validation:
             print("Using cross validation")
             best_arg, best_val_acc = cross_validation(method_obj=method_obj, search_arg_name=search_arg_name, search_arg_vals=search_arg_vals, data=train_data, labels=train_labels, k_fold=4)
+            print("Best value for " + str(search_arg_name) + " is " + str(best_arg) + " with an accuracy of " + str(best_val_acc))
             # set the classifier/regression object to have the best hyperparameter found via cross validation:
-            method_obj.set_arguments(best_arg)
+            arg_dict = {search_arg_name: best_arg}
+            method_obj.set_arguments(**arg_dict)
 
         # FIT AND PREDICT:
         method_obj.fit(train_data, output_training_target)
@@ -157,6 +164,10 @@ if __name__ == '__main__':
     parser.add_argument('--ridge_regression_lmda', type=float, default=1, help="lambda for ridge regression")
     parser.add_argument('--max_iters', type=int, default=1000, help="max iters for methods which are iterative")
     parser.add_argument('--use_cross_validation', action="store_true", help="to enable cross validation")
+    parser.add_argument('--start_range', default=0, type=float, help="the starting of the range for hyper parameter of cross-validation")
+    parser.add_argument('--end_range', default=1, type=float, help="the ending of the range for hyper parameter of cross-validation")
+    parser.add_argument('--step_range', default=1, type=float, help="the step for the range of hyperparameter in cross-validation")
+    
 
     # Feel free to add more arguments here if you need
 
