@@ -88,11 +88,8 @@ def cross_validation(method_obj=None, search_arg_name=None, search_arg_vals=[], 
     plt.title("Cross validation results")
     plt.ylabel("Metric of the model's precision")
     plt.xlabel("Possible values of the hyperparameter")
-    plt.plot(search_arg_vals,acc_by_param)
-    if search_arg_name=="lr":
-        plt.xscale('log')    
+    plt.plot(search_arg_vals,acc_by_param)    
     plt.savefig("Graph")
-    plt.show()    
          
     return best_hyperparam, best_acc
 

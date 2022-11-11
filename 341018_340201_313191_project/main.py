@@ -92,7 +92,7 @@ def main(args):
                 method_obj =  LogisticRegression(lr=args.lr, max_iters=args.max_iters, nbr_classes=3)
                 #use with cross validation              
                 #search_arg_vals = np.arange(args.start_range, args.end_range, args.step_range)
-                search_arg_vals=np.logspace(-7,-4,4)
+                search_arg_vals=np.arange(1e-5,1e-4,1e-5)
                 #change depending of which hyperparameter perform cross validation
                 #search_arg_name = "max_iters"
                 search_arg_name = "lr"     
@@ -137,7 +137,7 @@ def main(args):
         if args.use_cross_validation:
             print("Using cross validation")
             best_arg, best_val_acc = cross_validation(method_obj=method_obj, search_arg_name=search_arg_name, search_arg_vals=search_arg_vals, data=train_data, labels=train_labels, k_fold=4)
-            print("Best value for " + str(search_arg_name) + " is " + str(best_arg) + " with an accuracy of " + str(best_val_acc))
+            print("Best value for " + str(search_arg_name) + " is " + str(best_arg) + " with a metric of " + str(best_val_acc))
             # set the classifier/regression object to have the best hyperparameter found via cross validation:
             arg_dict = {search_arg_name: best_arg}
             method_obj.set_arguments(**arg_dict)
@@ -159,7 +159,7 @@ def main(args):
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--dataset', default="h36m", type=str, help="choose between h36m, movies, music")
+    parser.add_argument('--dataset', default="music", type=str, help="choose between h36m, movies, music")
     parser.add_argument('--path_to_data', default="..", type=str, help="the path to wherever you put the data, if it's in the parent folder, you can use ..")
     parser.add_argument('--method_name', default="knn", type=str, help="knn / logistic_regression / nn")
     parser.add_argument('--knn_neighbours', default=3, type=int, help="number of knn neighbours")
