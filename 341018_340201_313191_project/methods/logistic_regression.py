@@ -47,6 +47,7 @@ class LogisticRegression(object):
         elif not self.max_iters_set:
             self.max_iters = 20
             self.max_iters_set = True 
+
         
         #setting the number of classes for classification
         if "nbr_classes" in kwargs: 
@@ -65,7 +66,7 @@ class LogisticRegression(object):
         """
 
         #training the data / optimizing the weights 
-        self.w = self.logistic_regression_train_multi(training_data, training_labels, self.max_iters, self.lr)
+        self.w = self.logistic_regression_train_multi(training_data, training_labels, max_iters=self.max_iters, lr=self.lr)
         #prediction on the training data 
         return self.logistic_regression_classify_multi(training_data, self.w)
      #----------------------------------------------------------------------------------------
@@ -97,10 +98,7 @@ class LogisticRegression(object):
         #weighted_mat = np.vectorize(np.exp)(data @ w)
         weighted_mat=np.exp(data@w) 
         sum_mat = np.sum(weighted_mat, axis=1)
-        for i in range(weighted_mat.shape[0]):
-            for j in range(weighted_mat.shape[1]):
-                weighted_mat[i,j] = weighted_mat[i,j] / sum_mat[i]
-        return weighted_mat
+        return weighted_mat/sum_mat.reshape((-1,1))
         
     #----------------------------------------------------------------------------------------
     def gradient_logistic_multi(self, data, labels, w):

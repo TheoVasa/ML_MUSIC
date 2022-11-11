@@ -1,0 +1,152 @@
+{
+    "version": "1.4.0",
+    "project": {
+        "name": "ml_music",
+        "directory": "C:\\Users\\assel\\ML_MUSIC",
+        "workspaceDir": "C:\\Users\\assel\\ML_MUSIC",
+        "sources": [
+            "C:\\Users\\assel\\ML_MUSIC\\src\\main\\scala",
+            "C:\\Users\\assel\\ML_MUSIC\\src\\main\\scala-2.12",
+            "C:\\Users\\assel\\ML_MUSIC\\src\\main\\scala-2",
+            "C:\\Users\\assel\\ML_MUSIC\\src\\main\\java",
+            "C:\\Users\\assel\\ML_MUSIC\\target\\scala-2.12\\src_managed\\main"
+        ],
+        "dependencies": [
+            
+        ],
+        "classpath": [
+            "C:\\Users\\assel\\.sbt\\boot\\scala-2.12.16\\lib\\scala-library.jar"
+        ],
+        "out": "C:\\Users\\assel\\ML_MUSIC\\.bloop\\ml_music",
+        "classesDir": "C:\\Users\\assel\\ML_MUSIC\\.bloop\\ml_music\\scala-2.12\\classes",
+        "resources": [
+            "C:\\Users\\assel\\ML_MUSIC\\src\\main\\resources",
+            "C:\\Users\\assel\\ML_MUSIC\\target\\scala-2.12\\resource_managed\\main"
+        ],
+        "scala": {
+            "organization": "org.scala-lang",
+            "name": "scala-compiler",
+            "version": "2.12.16",
+            "options": [
+                
+            ],
+            "jars": [
+                "C:\\Users\\assel\\.sbt\\boot\\scala-2.12.16\\lib\\scala-library.jar",
+                "C:\\Users\\assel\\.sbt\\boot\\scala-2.12.16\\lib\\jline.jar",
+                "C:\\Users\\assel\\.sbt\\boot\\scala-2.12.16\\lib\\scala-compiler.jar",
+                "C:\\Users\\assel\\.sbt\\boot\\scala-2.12.16\\lib\\scala-reflect.jar",
+                "C:\\Users\\assel\\.sbt\\boot\\scala-2.12.16\\lib\\scala-xml_2.12.jar"
+            ],
+            "setup": {
+                "order": "mixed",
+                "addLibraryToBootClasspath": true,
+                "addCompilerToClasspath": false,
+                "addExtraJarsToClasspath": false,
+                "manageBootClasspath": true,
+                "filterLibraryFromClasspath": true
+            }
+        },
+        "java": {
+            "options": [
+                
+            ]
+        },
+        "test": {
+            "frameworks": [
+                {
+                    "names": [
+                        "org.scalacheck.ScalaCheckFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.specs2.runner.Specs2Framework",
+                        "org.specs2.runner.SpecsFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.specs.runner.SpecsFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.scalatest.tools.Framework",
+                        "org.scalatest.tools.ScalaTestFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "com.novocode.junit.JUnitFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "munit.Framework"
+                    ]
+                }
+            ],
+            "options": {
+                "excludes": [
+                    
+                ],
+                "arguments": [
+                    
+                ]
+            }
+        },
+        "platform": {
+            "name": "jvm",
+            "config": {
+                "home": "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.2.8-hotspot",
+                "options": [
+                    "-Duser.dir=C:\\Users\\assel\\ML_MUSIC"
+                ]
+            },
+            "mainClass": [
+                
+            ]
+        },
+        "resolution": {
+            "modules": [
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala-library",
+                    "version": "2.12.16",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scala-library",
+                            "path": "C:\\Users\\assel\\.sbt\\boot\\scala-2.12.16\\lib\\scala-library.jar"
+                        },
+                        {
+                            "name": "scala-library",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\assel\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-library\\2.12.16\\scala-library-2.12.16-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala-library",
+                    "version": "2.12.16",
+                    "configurations": "optional",
+                    "artifacts": [
+                        {
+                            "name": "scala-library",
+                            "path": "C:\\Users\\assel\\.sbt\\boot\\scala-2.12.16\\lib\\scala-library.jar"
+                        },
+                        {
+                            "name": "scala-library",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\assel\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-library\\2.12.16\\scala-library-2.12.16-sources.jar"
+                        }
+                    ]
+                }
+            ]
+        },
+        "tags": [
+            "library"
+        ]
+    }
+}

@@ -56,3 +56,17 @@ INFO: Unsupported notification method: $/setTrace
 2022.11.05 15:49:43 INFO  time: initialize in 5.5s
 2022.11.05 15:49:45 WARN  Build server is not auto-connectable.
 2022.11.05 16:46:13 INFO  shutting down Metals
+2022.11.10 14:48:12 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\assel\ML_MUSIC\.metals\lsp.trace.json or C:\Users\assel\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.11.10 14:48:16 INFO  logging to file C:\Users\assel\ML_MUSIC\.metals\metals.log
+2022.11.10 14:48:16 INFO  Started: Metals version 0.11.9 in workspace 'C:\Users\assel\ML_MUSIC' for client Visual Studio Code 1.73.0.
+2022.11.10 14:48:18 INFO  time: initialize in 2.33s
+2022.11.10 14:48:21 WARN  Build server is not auto-connectable.
+2022.11.10 19:58:30 INFO  shutting down Metals
+2022.11.11 08:58:16 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\assel\ML_MUSIC\.metals\lsp.trace.json or C:\Users\assel\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.11.11 08:58:18 INFO  logging to file C:\Users\assel\ML_MUSIC\.metals\metals.log
+2022.11.11 08:58:18 INFO  Started: Metals version 0.11.9 in workspace 'C:\Users\assel\ML_MUSIC' for client Visual Studio Code 1.73.1.
+2022.11.11 08:58:20 INFO  time: initialize in 2.03s
+2022.11.11 08:58:23 WARN  Build server is not auto-connectable.
+2022.11.11 10:17:56 INFO  shutting down Metals
+2022.11.11 17:16:57 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\assel\ML_MUSIC\.metals\lsp.trace.json or C:\Users\assel\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.11.11 17:16:58 INFO  logging to file C:\Users\assel\ML_MUSIC\.metals\metals.log

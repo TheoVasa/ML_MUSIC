@@ -91,10 +91,11 @@ def main(args):
                 #don't enter specific hyperparameters 
                 method_obj =  LogisticRegression(lr=args.lr, max_iters=args.max_iters, nbr_classes=3)
                 #use with cross validation              
-                search_arg_vals = np.arange(args.start_range, args.end_range, args.step_range)
+                #search_arg_vals = np.arange(args.start_range, args.end_range, args.step_range)
+                search_arg_vals=np.logspace(-7,-4,4)
                 #change depending of which hyperparameter perform cross validation
-                search_arg_name = "max_iters"
-                #search_arg_name = "lr"     
+                #search_arg_name = "max_iters"
+                search_arg_name = "lr"     
             else :
                 #enter the parameters 
                 method_obj =  LogisticRegression(lr=args.lr, max_iters=args.max_iters, nbr_classes=3)
@@ -118,7 +119,9 @@ def main(args):
                 #don't enter specific hyperparameters 
                 method_obj = LinearRegression()
                 #use with cross validation      
-                search_arg_vals = np.arange(args.start_range, args.end_range, args.step_range)
+                #search_arg_vals = np.arange(args.start_range, args.end_range, args.step_range)
+                #search_arg_vals=np.logspace(-5,1,7)
+                search_arg_vals=np.arange(0,20)
                 search_arg_name = "lmda"     
             else : 
                 method_obj = LinearRegression(lmda=args.ridge_regression_lmda)
@@ -162,7 +165,7 @@ if __name__ == '__main__':
     parser.add_argument('--knn_neighbours', default=3, type=int, help="number of knn neighbours")
     parser.add_argument('--lr', type=float, default=1e-5, help="learning rate for methods with learning rate")
     parser.add_argument('--ridge_regression_lmda', type=float, default=1, help="lambda for ridge regression")
-    parser.add_argument('--max_iters', type=int, default=1000, help="max iters for methods which are iterative")
+    parser.add_argument('--max_iters', type=int, default=100, help="max iters for methods which are iterative")
     parser.add_argument('--use_cross_validation', action="store_true", help="to enable cross validation")
     parser.add_argument('--start_range', default=0, type=float, help="the starting of the range for hyper parameter of cross-validation")
     parser.add_argument('--end_range', default=1, type=float, help="the ending of the range for hyper parameter of cross-validation")

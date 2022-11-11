@@ -1,5 +1,6 @@
 import numpy as np
 from metrics import accuracy_fn, mse_fn, macrof1_fn
+import matplotlib.pyplot as plt
 
 def splitting_fn(data, labels, indices, fold_size, fold):
     """
@@ -82,7 +83,16 @@ def cross_validation(method_obj=None, search_arg_name=None, search_arg_vals=[], 
     #deducting the best hyperparameter(s)
     best_index = find_param_ops(acc_by_param)
     best_hyperparam = search_arg_vals[best_index]
-    best_acc=acc_by_param[best_index]    
+    best_acc=acc_by_param[best_index]
+
+    plt.title("Cross validation results")
+    plt.ylabel("Metric of the model's precision")
+    plt.xlabel("Possible values of the hyperparameter")
+    plt.plot(search_arg_vals,acc_by_param)
+    if search_arg_name=="lr":
+        plt.xscale('log')    
+    plt.savefig("Graph")
+    plt.show()    
          
     return best_hyperparam, best_acc
 
