@@ -96,3 +96,22 @@ INFO: Unsupported notification method: $/setTrace
 2022.11.11 17:17:34 INFO  Connected to Build server: Bloop v1.5.4
 2022.11.11 17:17:35 INFO  time: Imported build in 0.21s
 2022.11.11 17:17:46 INFO  time: indexed workspace in 10s
+2022.11.11 22:25:40 INFO  shutting down Metals
+2022.11.11 22:27:27 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\assel\ML_MUSIC\.metals\lsp.trace.json or C:\Users\assel\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.11.11 22:27:29 INFO  logging to file C:\Users\assel\ML_MUSIC\.metals\metals.log
+2022.11.11 22:27:29 INFO  Started: Metals version 0.11.9 in workspace 'C:\Users\assel\ML_MUSIC' for client Visual Studio Code 1.73.1.
+2022.11.11 22:27:34 INFO  time: initialize in 4.94s
+2022.11.11 22:27:37 INFO  Attempting to connect to the build server...
+2022.11.11 22:27:37 INFO  Bloop uses C:\Program Files\Eclipse Adoptium\jdk-17.0.2.8-hotspot defined at C:\Users\assel\.bloop\bloop.json
+2022.11.11 22:27:37 INFO  skipping build import with status 'Installed'
+2022.11.11 22:27:37 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\assel\ML_MUSIC\.metals\bsp.trace.json or C:\Users\assel\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.11.11 22:27:37 INFO  Attempting to connect to the build server...
+2022.11.11 22:27:37 INFO  Bloop uses C:\Program Files\Eclipse Adoptium\jdk-17.0.2.8-hotspot defined at C:\Users\assel\.bloop\bloop.json
+2022.11.11 22:27:37 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\assel\ML_MUSIC\project\.metals\bsp.trace.json or C:\Users\assel\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.11.11 22:27:37 INFO  time: Connected to build server in 0.59s
+2022.11.11 22:27:37 INFO  Connected to Build server: Bloop v1.5.4
+2022.11.11 22:27:38 INFO  time: Imported build in 0.24s
+2022.11.11 22:27:43 INFO  time: indexed workspace in 5.1s
+2022.11.11 22:27:48 INFO  shutting down Metals
+2022.11.11 22:27:48 INFO  Shut down connection with build server.
+2022.11.11 22:27:48 INFO  Shut down connection with build server.
