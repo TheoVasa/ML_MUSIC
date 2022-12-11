@@ -47,7 +47,7 @@ class PCA(object):
         #### YOUR CODE HERE! 
         ###
         ##
-
+        exvar=float(0)
         return exvar
 
     def reduce_dimension(self, data):
