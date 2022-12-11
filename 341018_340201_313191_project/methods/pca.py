@@ -80,7 +80,7 @@ class PCA(object):
             Returns:
                 data_reduced (float): reduced data of shape (N,d)
         """
-        
-        return  self.W.T@(data-self.mean)
+        Xtilde=data-self.mean
+        return Xtilde@self.W
         
 
