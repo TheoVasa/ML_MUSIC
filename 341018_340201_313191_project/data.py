@@ -84,7 +84,7 @@ class FMA_Dataset(Dataset):
         self.path_to_data = path_to_data
         self.data, self.regression_target, self.labels = self.load_data(normalize_inputs=True, normalize_outputs=True, means=means, stds=stds)
         self.feature_dim = self.data.shape[1]
-        self.num_classes = 16
+        self.num_classes = 3
         self.regression_target_size = 1
 
     def load_data(self, normalize_inputs, normalize_outputs, means=None, stds=None):

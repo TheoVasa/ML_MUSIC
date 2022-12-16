@@ -12,6 +12,14 @@ class SimpleNetwork(nn.Module):
     """
     def __init__(self, input_size, num_classes, hidden_size=32):
         super(SimpleNetwork, self).__init__()
+        self.input_size=input_size
+        self.num_classes=num_classes
+        self.hidden_size=hidden_size
+
+        self.fc1 = nn.Linear(self.input_size, self.hidden_size)
+        self.fc2 = nn.Linear(self.hidden_size,self.hidden_size)
+        self.fc3 = nn.Linear(self.hidden_size,self.hidden_size)
+        self.fc4 = nn.Linear(self.hidden_size,self.num_classes)
 
     def forward(self, x):
         """
@@ -22,13 +30,12 @@ class SimpleNetwork(nn.Module):
         Returns:
             output_class (torch.tensor): shape (N, C) (logits)
         """
-
-        ##
-        ###
-        #### YOUR CODE HERE! 
-        ###
-        ##
-
+        x = x.flatten(-3)
+        
+        x            = F.relu(self.fc1(x))
+        x            = F.relu(self.fc2(x))
+        x            = F.relu(self.fc3(x))
+        output_class = F.relu(self.fc4(x)) 
         return output_class
 
 class Trainer(object):
@@ -71,11 +78,14 @@ class Trainer(object):
         i.e. self.model.train()
         """
         
-        ##
-        ###
-        #### YOUR CODE HERE! 
-        ###
-        ##
+        self.model.train()
+        for it, batch in enumerate(dataloader):
+            x,y=batch
+            logits=self.forward(x)
+            loss=self.classification_criterion(logits,y)
+            loss.backward()
+            self.optimizer.step()
+            self.optimizer.zero_grad()
 
     def eval(self, dataloader):
         """
@@ -88,10 +98,13 @@ class Trainer(object):
                 We return one torch tensor which we will use to save our results (for the competition!)
                 results_class (torch.tensor): classification results of shape (N,)
         """
-        ##
-        ###
-        #### YOUR CODE HERE! 
-        ###
-        ##
+        self.model.eval()
+        with torch.no_grad():
+            results_class=[]
+            for it, batch in enumerate(dataloader):
+                x,y=batch
+                results_class.append(self.model(x))
+
+
         
-        return results_class
+        return torch.cat(results_class)
