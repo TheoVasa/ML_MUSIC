@@ -22,7 +22,7 @@ import os
 import unittest
 import importlib
 from pathlib import Path
-os.environ['KMP_DUPLICATE_LIB_OK']='True' 
+
 import numpy as np
 import torch
 from torch.utils.data import TensorDataset, DataLoader

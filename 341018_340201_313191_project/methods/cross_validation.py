@@ -63,6 +63,7 @@ def cross_validation(method_obj=None, search_arg_name=None, search_arg_vals=[], 
     acc_by_param = []
 
     for arg in search_arg_vals:
+        print("test the value", arg, "for", search_arg_name)
         #set argument(s)
         arg_dict = {search_arg_name: arg}
         method_obj.set_arguments(**arg_dict)
@@ -72,6 +73,7 @@ def cross_validation(method_obj=None, search_arg_name=None, search_arg_vals=[], 
             #split into train and validation data depending of the current fold 
             train_data,train_label,val_data,val_label = splitting_fn(data,labels,indices,fold_size,fold)
             #train the data
+            print("fit the model with the value and the current fold =", fold)
             method_obj.fit(train_data,train_label)
             #test the accuracy of this prediction 
             val_pred = method_obj.predict(val_data)
@@ -85,11 +87,12 @@ def cross_validation(method_obj=None, search_arg_name=None, search_arg_vals=[], 
     best_hyperparam = search_arg_vals[best_index]
     best_acc=acc_by_param[best_index]
 
-    plt.title("Cross validation results")
-    plt.ylabel("Metric of the model's precision")
-    plt.xlabel("Possible values of the hyperparameter")
-    plt.plot(search_arg_vals,acc_by_param)    
-    plt.savefig("Graph")
+
+    #plt.title("Cross validation results")
+    #plt.ylabel("Metric of the model's precision")
+    #plt.xlabel("Possible values of the hyperparameter")
+    #plt.plot(search_arg_vals,acc_by_param)    
+    #plt.savefig("Graph")
          
     return best_hyperparam, best_acc
 

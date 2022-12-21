@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+import numpy as np
 from metrics import accuracy_fn, macrof1_fn
 
 ## MS2!!
@@ -10,16 +11,17 @@ class SimpleNetwork(nn.Module):
     """
     A network which does classification!
     """
-    def __init__(self, input_size, num_classes, hidden_size=32):
+    def __init__(self, input_size, num_classes):
         super(SimpleNetwork, self).__init__()
         self.input_size=input_size
         self.num_classes=num_classes
-        self.hidden_size=hidden_size
-
-        self.fc1 = nn.Linear(self.input_size, self.hidden_size)
-        self.fc2 = nn.Linear(self.hidden_size,self.hidden_size)
-        self.fc3 = nn.Linear(self.hidden_size,self.hidden_size)
-        self.fc4 = nn.Linear(self.hidden_size,self.num_classes)
+        #model : 
+        # to define my nbr of neurons I just took more or less the mean between the input and to nbr of classes 
+        # we could have used a more complexe formula with  hyperparameters and run cross-validation on it to optimize the model 
+        self.fc1 = nn.Linear(self.input_size, 121)
+        self.fc2 = nn.Linear(121 , 65)
+        self.fc3 = nn.Linear(65 , 30)
+        self.fc4 = nn.Linear(30 ,self.num_classes)
 
     def forward(self, x):
         """
@@ -30,20 +32,21 @@ class SimpleNetwork(nn.Module):
         Returns:
             output_class (torch.tensor): shape (N, C) (logits)
         """
-        x = x.flatten(-3)
+        #print(x.shape)
         
         x            = F.relu(self.fc1(x))
         x            = F.relu(self.fc2(x))
         x            = F.relu(self.fc3(x))
-        output_class = F.relu(self.fc4(x)) 
+        # no activation fonction for last layer
+        output_class = self.fc4(x) 
         return output_class
 
 class Trainer(object):
 
     """
-        Trainer class for the deep network.
+        Trainer class for the deep network.cd Desk
     """
-
+    #OK
     def __init__(self, model, lr, epochs, beta=100):
         """
         """
@@ -55,6 +58,7 @@ class Trainer(object):
         self.classification_criterion = nn.CrossEntropyLoss()
         self.optimizer = torch.optim.SGD(self.model.parameters(), lr=self.lr)
 
+    #OK
     def train_all(self, dataloader_train, dataloader_val):
         """
         Method to iterate over the epochs. In each epoch, it should call the functions
@@ -62,14 +66,16 @@ class Trainer(object):
         """
         for ep in range(self.epochs):
             self.train_one_epoch(dataloader_train)
-            self.eval(dataloader_val)
+            pred = self.eval(dataloader_val).numpy()
+            val_labels = dataloader_val.dataset.labels 
+            print("EPOCH " + str(ep) + "/" + str(self.epochs) + " accuracy : " + str(accuracy_fn(pred, val_labels)))
 
-            if (ep+1) % 50 == 0:
+            if (ep+1) % 2 == 0:
                 print("Reduce Learning rate")
                 for g in self.optimizer.param_groups:
                     g["lr"] = g["lr"]*0.8
 
-
+    #OK
     def train_one_epoch(self, dataloader):
         """
         Method to train for ONE epoch.
@@ -80,9 +86,9 @@ class Trainer(object):
         
         self.model.train()
         for it, batch in enumerate(dataloader):
-            x,y=batch
-            logits=self.forward(x)
-            loss=self.classification_criterion(logits,y)
+            x, _ , labels = batch
+            logits=self.model.forward(x)
+            loss=self.classification_criterion(logits,labels)
             loss.backward()
             self.optimizer.step()
             self.optimizer.zero_grad()
@@ -102,9 +108,9 @@ class Trainer(object):
         with torch.no_grad():
             results_class=[]
             for it, batch in enumerate(dataloader):
-                x,y=batch
-                results_class.append(self.model(x))
-
-
-        
+                x,_,_=batch
+                pred = self.model(x)
+                pred = np.argmax(pred, axis=1)
+                results_class.append(pred)
         return torch.cat(results_class)
+

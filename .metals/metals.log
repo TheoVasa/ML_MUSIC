@@ -204,3 +204,372 @@ INFO: Unsupported notification method: $/setTrace
 2022.12.14 13:19:53 INFO  Shut down connection with build server.
 2022.12.16 09:06:48 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\assel\DOCUMENTS\13-EPFL BA3\Introduction to ML\Projet\ML_MUSIC\.metals\lsp.trace.json or C:\Users\assel\AppData\Local\scalameta\metals\cache\lsp.trace.json
 2022.12.16 09:06:50 INFO  logging to file C:\Users\assel\DOCUMENTS\13-EPFL BA3\Introduction to ML\Projet\ML_MUSIC\.metals\metals.log
+2022.12.19 10:56:13 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\vasarinocode\Desktop\PYTHON\ML\ML_MUSIC\.metals\lsp.trace.json or C:\Users\vasarinocode\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.12.19 10:56:19 INFO  logging to file C:\Users\vasarinocode\Desktop\PYTHON\ML\ML_MUSIC\.metals\metals.log
+2022.12.19 10:56:19 INFO  Started: Metals version 0.11.9 in workspace 'C:\Users\vasarinocode\Desktop\PYTHON\ML\ML_MUSIC' for client Visual Studio Code 1.74.1.
+2022.12.19 10:56:32 INFO  time: initialize in 12s
+2022.12.19 10:56:41 INFO  Attempting to connect to the build server...
+2022.12.19 10:56:41 INFO  Bloop uses C:\Users\vasarinocode\.jabba\jdk\adopt@1.11.0-11 defined at C:\Users\vasarinocode\.bloop\bloop.json
+2022.12.19 10:57:23 ERROR Starting the bsp launcher for bloop...
+2022.12.19 10:57:23 ERROR Opening a bsp server connection with 'bsp --protocol tcp --port 19869'...
+2022.12.19 10:57:23 ERROR Waiting for the bsp connection to come up...
+2022.12.19 10:57:23 ERROR Waiting for the bsp connection to come up...
+2022.12.19 10:57:23 ERROR Waiting for the bsp connection to come up...
+2022.12.19 10:57:23 ERROR Waiting for the bsp connection to come up...
+2022.12.19 10:57:23 ERROR Waiting for the bsp connection to come up...
+2022.12.19 10:57:23 ERROR Waiting for the bsp connection to come up...
+2022.12.19 10:57:23 ERROR Waiting for the bsp connection to come up...
+2022.12.19 10:57:23 ERROR Waiting for the bsp connection to come up...
+2022.12.19 10:57:23 ERROR Waiting for the bsp connection to come up...
+2022.12.19 10:57:23 ERROR Waiting for the bsp connection to come up...
+2022.12.19 10:57:23 ERROR Waiting for the bsp connection to come up...
+2022.12.19 10:57:23 ERROR Waiting for the bsp connection to come up...
+2022.12.19 10:57:23 ERROR Waiting for the bsp connection to come up...
+2022.12.19 10:57:23 ERROR Waiting for the bsp connection to come up...
+2022.12.19 10:57:23 ERROR Waiting for the bsp connection to come up...
+2022.12.19 10:57:23 ERROR Waiting for the bsp connection to come up...
+2022.12.19 10:57:23 ERROR Waiting for the bsp connection to come up...
+2022.12.19 10:57:23 ERROR Waiting for the bsp connection to come up...
+2022.12.19 10:57:23 ERROR Waiting for the bsp connection to come up...
+2022.12.19 10:57:23 ERROR Waiting for the bsp connection to come up...
+2022.12.19 10:57:23 ERROR Waiting for the bsp connection to come up...
+2022.12.19 10:57:23 ERROR Waiting for the bsp connection to come up...
+2022.12.19 10:57:23 ERROR Waiting for the bsp connection to come up...
+2022.12.19 10:57:23 ERROR Waiting for the bsp connection to come up...
+2022.12.19 10:57:23 ERROR Waiting for the bsp connection to come up...
+2022.12.19 10:57:23 ERROR error: The command bsp --protocol tcp --port 19869 returned with an error
+2022.12.19 10:57:23 ERROR > No server running at 127.0.0.1:8212, let's fire one...
+2022.12.19 10:57:23 ERROR > Resolving ch.epfl.scala:bloop-frontend_2.12:1.5.4...
+2022.12.19 10:57:23 ERROR > Attempting a connection to the server...
+2022.12.19 10:57:23 ERROR > Starting bloop server at 127.0.0.1:8212...
+2022.12.19 10:57:23 ERROR > Attempting a connection to the server...
+2022.12.19 10:57:23 ERROR > Attempting a connection to the server...
+2022.12.19 10:57:23 ERROR > Attempting a connection to the server...
+2022.12.19 10:57:23 ERROR > Attempting a connection to the server...
+2022.12.19 10:57:23 ERROR > [0m[32m[D][0m Loading workspace settings from bloop.settings.json
+2022.12.19 10:57:23 ERROR > [0m[32m[D][0m Loading 2 projects from 'c:\Users\vasarinocode\Desktop\PYTHON\ML\ML_MUSIC\.bloop'...
+2022.12.19 10:57:23 ERROR > [0m[32m[D][0m Loading project from 'c:\Users\vasarinocode\Desktop\PYTHON\ML\ML_MUSIC\.bloop\ml_music.json'
+2022.12.19 10:57:23 ERROR > [0m[32m[D][0m Loading project from 'c:\Users\vasarinocode\Desktop\PYTHON\ML\ML_MUSIC\.bloop\ml_music-test.json'
+2022.12.19 10:57:23 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-library.jar doesn't exist!
+2022.12.19 10:57:23 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-library.jar doesn't exist!
+2022.12.19 10:57:23 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\assel\.sbt\boot\scala-2.12.16\lib\jline.jar doesn't exist!
+2022.12.19 10:57:23 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\assel\.sbt\boot\scala-2.12.16\lib\jline.jar doesn't exist!
+2022.12.19 10:57:23 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-compiler.jar doesn't exist!
+2022.12.19 10:57:23 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-compiler.jar doesn't exist!
+2022.12.19 10:57:23 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-reflect.jar doesn't exist!
+2022.12.19 10:57:23 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-reflect.jar doesn't exist!
+2022.12.19 10:57:23 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-xml_2.12.jar doesn't exist!
+2022.12.19 10:57:23 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-xml_2.12.jar doesn't exist!
+2022.12.19 10:57:23 ERROR > [0m[32m[D][0m Cache miss for scala instance org.scala-lang:scala-compiler:2.12.16.
+2022.12.19 10:57:23 ERROR > [0m[32m[D][0m   => C:\Users\assel\.sbt\boot\scala-2.12.16\lib\jline.jar
+2022.12.19 10:57:23 ERROR > [0m[32m[D][0m   => C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-compiler.jar
+2022.12.19 10:57:23 ERROR > [0m[32m[D][0m   => C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-library.jar
+2022.12.19 10:57:23 ERROR > [0m[32m[D][0m   => C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-reflect.jar
+2022.12.19 10:57:23 ERROR > [0m[32m[D][0m   => C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-xml_2.12.jar
+2022.12.19 10:57:23 ERROR > [0m[32m[D][0m Cache miss for scala instance org.scala-lang:scala-compiler:2.12.16.
+2022.12.19 10:57:23 ERROR > [0m[32m[D][0m   => C:\Users\assel\.sbt\boot\scala-2.12.16\lib\jline.jar
+2022.12.19 10:57:23 ERROR > [0m[32m[D][0m   => C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-compiler.jar
+2022.12.19 10:57:23 ERROR > [0m[32m[D][0m   => C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-library.jar
+2022.12.19 10:57:23 ERROR > [0m[32m[D][0m   => C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-reflect.jar
+2022.12.19 10:57:23 ERROR > [0m[32m[D][0m   => C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-xml_2.12.jar
+2022.12.19 10:57:23 ERROR > [0m[32m[D][0m Elapsed: 1964.177 ms
+2022.12.19 10:57:23 ERROR > [0m[31m[E][0m Failed to load project from c:\Users\vasarinocode\Desktop\PYTHON\ML\ML_MUSIC\.bloop\ml_music.json
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m bloop.data.Project$ProjectReadException: Failed to load project from c:\Users\vasarinocode\Desktop\PYTHON\ML\ML_MUSIC\.bloop\ml_music.json
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	bloop.data.Project$.fromBytesAndOrigin(Project.scala:295)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	bloop.engine.BuildLoader$.loadProject(BuildLoader.scala:248)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	bloop.engine.BuildLoader$.$anonfun$loadBuildIncrementally$3(BuildLoader.scala:59)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskRunLoop$.startFull(TaskRunLoop.scala:81)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskRestartCallback.syncOnSuccess(TaskRestartCallback.scala:101)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskRestartCallback.onSuccess(TaskRestartCallback.scala:74)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskShift$Register$$anon$1.run(TaskShift.scala:65)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	monix.execution.internal.InterceptRunnable.run(InterceptRunnable.scala:27)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	java.base/java.lang.Thread.run(Thread.java:829)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m Caused by: java.nio.file.NoSuchFileException: C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-library.jar
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:53)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:38)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	java.base/sun.nio.fs.WindowsFileSystemProvider.readAttributes(WindowsFileSystemProvider.java:198)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	java.base/java.nio.file.Files.readAttributes(Files.java:1764)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	bloop.ScalaInstance.$anonfun$hashCode$1(ScalaInstance.scala:111)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:286)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	scala.collection.mutable.WrappedArray.foreach(WrappedArray.scala:38)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	scala.collection.TraversableLike.map(TraversableLike.scala:286)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	scala.collection.TraversableLike.map$(TraversableLike.scala:279)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	scala.collection.AbstractTraversable.map(Traversable.scala:108)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	bloop.ScalaInstance.<init>(ScalaInstance.scala:107)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	bloop.ScalaInstance$.newInstance$1(ScalaInstance.scala:180)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	bloop.ScalaInstance$.$anonfun$apply$7(ScalaInstance.scala:185)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1705)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	bloop.ScalaInstance$.apply(ScalaInstance.scala:185)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	bloop.data.Project$.$anonfun$fromConfig$1(Project.scala:311)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	scala.Option.flatMap(Option.scala:271)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	bloop.data.Project$.fromConfig(Project.scala:306)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	bloop.data.Project$.fromBytesAndOrigin(Project.scala:289)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	bloop.engine.BuildLoader$.loadProject(BuildLoader.scala:248)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	bloop.engine.BuildLoader$.$anonfun$loadBuildIncrementally$3(BuildLoader.scala:59)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskRunLoop$.startFull(TaskRunLoop.scala:81)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskRestartCallback.syncOnSuccess(TaskRestartCallback.scala:101)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskRestartCallback.onSuccess(TaskRestartCallback.scala:74)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskShift$Register$$anon$1.run(TaskShift.scala:65)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	monix.execution.internal.InterceptRunnable.run(InterceptRunnable.scala:27)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+2022.12.19 10:57:23 ERROR > [0m[36m[T][0m 	java.base/java.lang.Thread.run(Thread.java:829)
+2022.12.19 10:57:23 ERROR error: The launcher failed to establish a bsp connection, aborting...
+2022.12.19 10:57:23 ERROR Failed to connect with build server, no functionality will work.java.lang.RuntimeException: The server did not start, got FailedToOpenBspConnection
+	at bloop.launcher.LauncherMain.failPromise$1(Launcher.scala:92)
+	at bloop.launcher.LauncherMain.runLauncher(Launcher.scala:119)
+	at scala.meta.internal.metals.BloopServers$$anon$2.run(BloopServers.scala:496)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:829)
+
+2022.12.20 11:21:12 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\vasarinocode\Desktop\PYTHON\ML\ML_MUSIC\.metals\lsp.trace.json or C:\Users\vasarinocode\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.12.20 11:21:14 INFO  logging to file C:\Users\vasarinocode\Desktop\PYTHON\ML\ML_MUSIC\.metals\metals.log
+2022.12.20 11:21:14 INFO  Started: Metals version 0.11.9 in workspace 'C:\Users\vasarinocode\Desktop\PYTHON\ML\ML_MUSIC' for client Visual Studio Code 1.74.1.
+2022.12.20 11:21:22 INFO  time: initialize in 8.34s
+2022.12.20 11:21:27 INFO  Attempting to connect to the build server...
+2022.12.20 11:21:27 INFO  Bloop uses C:\Users\vasarinocode\.jabba\jdk\adopt@1.11.0-11 defined at C:\Users\vasarinocode\.bloop\bloop.json
+2022.12.20 11:21:48 ERROR Starting the bsp launcher for bloop...
+2022.12.20 11:21:48 ERROR Opening a bsp server connection with 'bsp --protocol tcp --port 16537'...
+2022.12.20 11:21:48 ERROR Waiting for the bsp connection to come up...
+2022.12.20 11:21:48 ERROR Waiting for the bsp connection to come up...
+2022.12.20 11:21:48 ERROR Waiting for the bsp connection to come up...
+2022.12.20 11:21:48 ERROR Waiting for the bsp connection to come up...
+2022.12.20 11:21:48 ERROR Waiting for the bsp connection to come up...
+2022.12.20 11:21:48 ERROR Waiting for the bsp connection to come up...
+2022.12.20 11:21:48 ERROR Waiting for the bsp connection to come up...
+2022.12.20 11:21:48 ERROR Waiting for the bsp connection to come up...
+2022.12.20 11:21:48 ERROR Waiting for the bsp connection to come up...
+2022.12.20 11:21:48 ERROR Waiting for the bsp connection to come up...
+2022.12.20 11:21:48 ERROR Waiting for the bsp connection to come up...
+2022.12.20 11:21:48 ERROR Waiting for the bsp connection to come up...
+2022.12.20 11:21:48 ERROR Waiting for the bsp connection to come up...
+2022.12.20 11:21:48 ERROR error: The command bsp --protocol tcp --port 16537 returned with an error
+2022.12.20 11:21:48 ERROR > No server running at 127.0.0.1:8212, let's fire one...
+2022.12.20 11:21:48 ERROR > Resolving ch.epfl.scala:bloop-frontend_2.12:1.5.4...
+2022.12.20 11:21:48 ERROR > Starting bloop server at 127.0.0.1:8212...
+2022.12.20 11:21:48 ERROR > Attempting a connection to the server...
+2022.12.20 11:21:48 ERROR > Attempting a connection to the server...
+2022.12.20 11:21:48 ERROR > Attempting a connection to the server...
+2022.12.20 11:21:48 ERROR > Attempting a connection to the server...
+2022.12.20 11:21:48 ERROR > [0m[32m[D][0m Loading workspace settings from bloop.settings.json
+2022.12.20 11:21:48 ERROR > [0m[32m[D][0m Loading 2 projects from 'c:\Users\vasarinocode\Desktop\PYTHON\ML\ML_MUSIC\.bloop'...
+2022.12.20 11:21:48 ERROR > [0m[32m[D][0m Loading project from 'c:\Users\vasarinocode\Desktop\PYTHON\ML\ML_MUSIC\.bloop\ml_music-test.json'
+2022.12.20 11:21:48 ERROR > [0m[32m[D][0m Loading project from 'c:\Users\vasarinocode\Desktop\PYTHON\ML\ML_MUSIC\.bloop\ml_music.json'
+2022.12.20 11:21:48 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-library.jar doesn't exist!
+2022.12.20 11:21:48 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-library.jar doesn't exist!
+2022.12.20 11:21:48 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\assel\.sbt\boot\scala-2.12.16\lib\jline.jar doesn't exist!
+2022.12.20 11:21:48 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\assel\.sbt\boot\scala-2.12.16\lib\jline.jar doesn't exist!
+2022.12.20 11:21:48 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-compiler.jar doesn't exist!
+2022.12.20 11:21:48 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-compiler.jar doesn't exist!
+2022.12.20 11:21:48 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-reflect.jar doesn't exist!
+2022.12.20 11:21:48 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-reflect.jar doesn't exist!
+2022.12.20 11:21:48 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-xml_2.12.jar doesn't exist!
+2022.12.20 11:21:48 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-xml_2.12.jar doesn't exist!
+2022.12.20 11:21:48 ERROR > [0m[32m[D][0m Cache miss for scala instance org.scala-lang:scala-compiler:2.12.16.
+2022.12.20 11:21:48 ERROR > [0m[32m[D][0m   => C:\Users\assel\.sbt\boot\scala-2.12.16\lib\jline.jar
+2022.12.20 11:21:48 ERROR > [0m[32m[D][0m   => C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-compiler.jar
+2022.12.20 11:21:48 ERROR > [0m[32m[D][0m   => C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-library.jar
+2022.12.20 11:21:48 ERROR > [0m[32m[D][0m   => C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-reflect.jar
+2022.12.20 11:21:48 ERROR > [0m[32m[D][0m   => C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-xml_2.12.jar
+2022.12.20 11:21:48 ERROR > [0m[32m[D][0m Cache miss for scala instance org.scala-lang:scala-compiler:2.12.16.
+2022.12.20 11:21:48 ERROR > [0m[32m[D][0m   => C:\Users\assel\.sbt\boot\scala-2.12.16\lib\jline.jar
+2022.12.20 11:21:48 ERROR > [0m[32m[D][0m   => C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-compiler.jar
+2022.12.20 11:21:48 ERROR > [0m[32m[D][0m   => C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-library.jar
+2022.12.20 11:21:48 ERROR > [0m[32m[D][0m   => C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-reflect.jar
+2022.12.20 11:21:48 ERROR > [0m[32m[D][0m   => C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-xml_2.12.jar
+2022.12.20 11:21:48 ERROR > [0m[32m[D][0m Elapsed: 707.0699 ms
+2022.12.20 11:21:48 ERROR > [0m[31m[E][0m Failed to load project from c:\Users\vasarinocode\Desktop\PYTHON\ML\ML_MUSIC\.bloop\ml_music-test.json
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m bloop.data.Project$ProjectReadException: Failed to load project from c:\Users\vasarinocode\Desktop\PYTHON\ML\ML_MUSIC\.bloop\ml_music-test.json
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	bloop.data.Project$.fromBytesAndOrigin(Project.scala:295)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	bloop.engine.BuildLoader$.loadProject(BuildLoader.scala:248)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	bloop.engine.BuildLoader$.$anonfun$loadBuildIncrementally$3(BuildLoader.scala:59)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskRunLoop$.startFull(TaskRunLoop.scala:81)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskRestartCallback.syncOnSuccess(TaskRestartCallback.scala:101)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskRestartCallback.onSuccess(TaskRestartCallback.scala:74)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskShift$Register$$anon$1.run(TaskShift.scala:65)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	monix.execution.internal.InterceptRunnable.run(InterceptRunnable.scala:27)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	java.base/java.lang.Thread.run(Thread.java:829)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m Caused by: java.nio.file.NoSuchFileException: C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-library.jar
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:53)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:38)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	java.base/sun.nio.fs.WindowsFileSystemProvider.readAttributes(WindowsFileSystemProvider.java:198)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	java.base/java.nio.file.Files.readAttributes(Files.java:1764)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	bloop.ScalaInstance.$anonfun$hashCode$1(ScalaInstance.scala:111)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:286)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	scala.collection.mutable.WrappedArray.foreach(WrappedArray.scala:38)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	scala.collection.TraversableLike.map(TraversableLike.scala:286)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	scala.collection.TraversableLike.map$(TraversableLike.scala:279)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	scala.collection.AbstractTraversable.map(Traversable.scala:108)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	bloop.ScalaInstance.<init>(ScalaInstance.scala:107)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	bloop.ScalaInstance$.newInstance$1(ScalaInstance.scala:180)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	bloop.ScalaInstance$.$anonfun$apply$7(ScalaInstance.scala:185)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1705)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	bloop.ScalaInstance$.apply(ScalaInstance.scala:185)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	bloop.data.Project$.$anonfun$fromConfig$1(Project.scala:311)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	scala.Option.flatMap(Option.scala:271)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	bloop.data.Project$.fromConfig(Project.scala:306)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	bloop.data.Project$.fromBytesAndOrigin(Project.scala:289)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	bloop.engine.BuildLoader$.loadProject(BuildLoader.scala:248)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	bloop.engine.BuildLoader$.$anonfun$loadBuildIncrementally$3(BuildLoader.scala:59)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskRunLoop$.startFull(TaskRunLoop.scala:81)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskRestartCallback.syncOnSuccess(TaskRestartCallback.scala:101)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskRestartCallback.onSuccess(TaskRestartCallback.scala:74)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskShift$Register$$anon$1.run(TaskShift.scala:65)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	monix.execution.internal.InterceptRunnable.run(InterceptRunnable.scala:27)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+2022.12.20 11:21:48 ERROR > [0m[36m[T][0m 	java.base/java.lang.Thread.run(Thread.java:829)
+2022.12.20 11:21:48 ERROR error: The launcher failed to establish a bsp connection, aborting...
+2022.12.20 11:21:48 ERROR Failed to connect with build server, no functionality will work.java.lang.RuntimeException: The server did not start, got FailedToOpenBspConnection
+	at bloop.launcher.LauncherMain.failPromise$1(Launcher.scala:92)
+	at bloop.launcher.LauncherMain.runLauncher(Launcher.scala:119)
+	at scala.meta.internal.metals.BloopServers$$anon$2.run(BloopServers.scala:496)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:829)
+
+2022.12.21 15:46:50 INFO  shutting down Metals
+2022.12.21 16:12:53 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\vasarinocode\Desktop\PYTHON\ML\ML_MUSIC\.metals\lsp.trace.json or C:\Users\vasarinocode\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.12.21 16:12:57 INFO  logging to file C:\Users\vasarinocode\Desktop\PYTHON\ML\ML_MUSIC\.metals\metals.log
+2022.12.21 16:12:57 INFO  Started: Metals version 0.11.9 in workspace 'C:\Users\vasarinocode\Desktop\PYTHON\ML\ML_MUSIC' for client Visual Studio Code 1.74.2.
+2022.12.21 16:13:02 INFO  time: initialize in 4.83s
+2022.12.21 16:13:06 INFO  Attempting to connect to the build server...
+2022.12.21 16:13:06 INFO  Bloop uses C:\Users\vasarinocode\.jabba\jdk\adopt@1.11.0-11 defined at C:\Users\vasarinocode\.bloop\bloop.json
+2022.12.21 16:13:23 ERROR Starting the bsp launcher for bloop...
+2022.12.21 16:13:23 ERROR Opening a bsp server connection with 'bsp --protocol tcp --port 16714'...
+2022.12.21 16:13:23 ERROR Waiting for the bsp connection to come up...
+2022.12.21 16:13:23 ERROR Waiting for the bsp connection to come up...
+2022.12.21 16:13:23 ERROR Waiting for the bsp connection to come up...
+2022.12.21 16:13:23 ERROR Waiting for the bsp connection to come up...
+2022.12.21 16:13:23 ERROR Waiting for the bsp connection to come up...
+2022.12.21 16:13:23 ERROR Waiting for the bsp connection to come up...
+2022.12.21 16:13:23 ERROR Waiting for the bsp connection to come up...
+2022.12.21 16:13:23 ERROR Waiting for the bsp connection to come up...
+2022.12.21 16:13:23 ERROR Waiting for the bsp connection to come up...
+2022.12.21 16:13:23 ERROR Waiting for the bsp connection to come up...
+2022.12.21 16:13:23 ERROR Waiting for the bsp connection to come up...
+2022.12.21 16:13:23 ERROR error: The command bsp --protocol tcp --port 16714 returned with an error
+2022.12.21 16:13:23 ERROR > No server running at 127.0.0.1:8212, let's fire one...
+2022.12.21 16:13:23 ERROR > Resolving ch.epfl.scala:bloop-frontend_2.12:1.5.4...
+2022.12.21 16:13:23 ERROR > Starting bloop server at 127.0.0.1:8212...
+2022.12.21 16:13:23 ERROR > Attempting a connection to the server...
+2022.12.21 16:13:23 ERROR > Attempting a connection to the server...
+2022.12.21 16:13:23 ERROR > Attempting a connection to the server...
+2022.12.21 16:13:23 ERROR > [0m[32m[D][0m Loading workspace settings from bloop.settings.json
+2022.12.21 16:13:23 ERROR > [0m[32m[D][0m Loading 2 projects from 'c:\Users\vasarinocode\Desktop\PYTHON\ML\ML_MUSIC\.bloop'...
+2022.12.21 16:13:23 ERROR > [0m[32m[D][0m Loading project from 'c:\Users\vasarinocode\Desktop\PYTHON\ML\ML_MUSIC\.bloop\ml_music.json'
+2022.12.21 16:13:23 ERROR > [0m[32m[D][0m Loading project from 'c:\Users\vasarinocode\Desktop\PYTHON\ML\ML_MUSIC\.bloop\ml_music-test.json'
+2022.12.21 16:13:23 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-library.jar doesn't exist!
+2022.12.21 16:13:23 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-library.jar doesn't exist!
+2022.12.21 16:13:23 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\assel\.sbt\boot\scala-2.12.16\lib\jline.jar doesn't exist!
+2022.12.21 16:13:23 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\assel\.sbt\boot\scala-2.12.16\lib\jline.jar doesn't exist!
+2022.12.21 16:13:23 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-compiler.jar doesn't exist!
+2022.12.21 16:13:23 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-compiler.jar doesn't exist!
+2022.12.21 16:13:23 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-reflect.jar doesn't exist!
+2022.12.21 16:13:23 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-reflect.jar doesn't exist!
+2022.12.21 16:13:23 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-xml_2.12.jar doesn't exist!
+2022.12.21 16:13:23 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-xml_2.12.jar doesn't exist!
+2022.12.21 16:13:23 ERROR > [0m[32m[D][0m Cache miss for scala instance org.scala-lang:scala-compiler:2.12.16.
+2022.12.21 16:13:23 ERROR > [0m[32m[D][0m   => C:\Users\assel\.sbt\boot\scala-2.12.16\lib\jline.jar
+2022.12.21 16:13:23 ERROR > [0m[32m[D][0m   => C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-compiler.jar
+2022.12.21 16:13:23 ERROR > [0m[32m[D][0m   => C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-library.jar
+2022.12.21 16:13:23 ERROR > [0m[32m[D][0m   => C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-reflect.jar
+2022.12.21 16:13:23 ERROR > [0m[32m[D][0m   => C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-xml_2.12.jar
+2022.12.21 16:13:23 ERROR > [0m[32m[D][0m Cache miss for scala instance org.scala-lang:scala-compiler:2.12.16.
+2022.12.21 16:13:23 ERROR > [0m[32m[D][0m   => C:\Users\assel\.sbt\boot\scala-2.12.16\lib\jline.jar
+2022.12.21 16:13:23 ERROR > [0m[32m[D][0m   => C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-compiler.jar
+2022.12.21 16:13:23 ERROR > [0m[32m[D][0m   => C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-library.jar
+2022.12.21 16:13:23 ERROR > [0m[32m[D][0m   => C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-reflect.jar
+2022.12.21 16:13:23 ERROR > [0m[32m[D][0m   => C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-xml_2.12.jar
+2022.12.21 16:13:23 ERROR > [0m[32m[D][0m Elapsed: 917.7116 ms
+2022.12.21 16:13:23 ERROR > [0m[31m[E][0m Failed to load project from c:\Users\vasarinocode\Desktop\PYTHON\ML\ML_MUSIC\.bloop\ml_music-test.json
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m bloop.data.Project$ProjectReadException: Failed to load project from c:\Users\vasarinocode\Desktop\PYTHON\ML\ML_MUSIC\.bloop\ml_music-test.json
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	bloop.data.Project$.fromBytesAndOrigin(Project.scala:295)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	bloop.engine.BuildLoader$.loadProject(BuildLoader.scala:248)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	bloop.engine.BuildLoader$.$anonfun$loadBuildIncrementally$3(BuildLoader.scala:59)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskRunLoop$.startFull(TaskRunLoop.scala:81)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskRestartCallback.syncOnSuccess(TaskRestartCallback.scala:101)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskRestartCallback.onSuccess(TaskRestartCallback.scala:74)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskShift$Register$$anon$1.run(TaskShift.scala:65)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	monix.execution.internal.InterceptRunnable.run(InterceptRunnable.scala:27)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	java.base/java.lang.Thread.run(Thread.java:829)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m Caused by: java.nio.file.NoSuchFileException: C:\Users\assel\.sbt\boot\scala-2.12.16\lib\scala-library.jar
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:53)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:38)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	java.base/sun.nio.fs.WindowsFileSystemProvider.readAttributes(WindowsFileSystemProvider.java:198)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	java.base/java.nio.file.Files.readAttributes(Files.java:1764)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	bloop.ScalaInstance.$anonfun$hashCode$1(ScalaInstance.scala:111)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:286)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	scala.collection.mutable.WrappedArray.foreach(WrappedArray.scala:38)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	scala.collection.TraversableLike.map(TraversableLike.scala:286)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	scala.collection.TraversableLike.map$(TraversableLike.scala:279)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	scala.collection.AbstractTraversable.map(Traversable.scala:108)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	bloop.ScalaInstance.<init>(ScalaInstance.scala:107)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	bloop.ScalaInstance$.newInstance$1(ScalaInstance.scala:180)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	bloop.ScalaInstance$.$anonfun$apply$7(ScalaInstance.scala:185)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1705)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	bloop.ScalaInstance$.apply(ScalaInstance.scala:185)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	bloop.data.Project$.$anonfun$fromConfig$1(Project.scala:311)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	scala.Option.flatMap(Option.scala:271)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	bloop.data.Project$.fromConfig(Project.scala:306)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	bloop.data.Project$.fromBytesAndOrigin(Project.scala:289)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	bloop.engine.BuildLoader$.loadProject(BuildLoader.scala:248)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	bloop.engine.BuildLoader$.$anonfun$loadBuildIncrementally$3(BuildLoader.scala:59)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskRunLoop$.startFull(TaskRunLoop.scala:81)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskRestartCallback.syncOnSuccess(TaskRestartCallback.scala:101)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskRestartCallback.onSuccess(TaskRestartCallback.scala:74)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskShift$Register$$anon$1.run(TaskShift.scala:65)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	monix.execution.internal.InterceptRunnable.run(InterceptRunnable.scala:27)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+2022.12.21 16:13:23 ERROR > [0m[36m[T][0m 	java.base/java.lang.Thread.run(Thread.java:829)
+2022.12.21 16:13:23 ERROR error: The launcher failed to establish a bsp connection, aborting...
+2022.12.21 16:13:23 ERROR Failed to connect with build server, no functionality will work.java.lang.RuntimeException: The server did not start, got FailedToOpenBspConnection
+	at bloop.launcher.LauncherMain.failPromise$1(Launcher.scala:92)
+	at bloop.launcher.LauncherMain.runLauncher(Launcher.scala:119)
+	at scala.meta.internal.metals.BloopServers$$anon$2.run(BloopServers.scala:496)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:829)
+
+2022.12.21 16:13:52 INFO  shutting down Metals
+2022.12.21 16:13:52 ERROR Unexpected error initializing serverorg.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:209)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:193)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:829)
+

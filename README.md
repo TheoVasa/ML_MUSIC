@@ -45,4 +45,8 @@ python main.py --dataset="music" --path_to_data=<where you placed the data folde
 #ridge regression with cross validation
 python main.py --dataset="music" --path_to_data=<where you placed the data folder> --method_name="ridge_regression" --use_cross_validation
 
+ 
+ COMMANDE FINALE POUR LE NN 
+ python main.py --dataset="music" --path_to_data=C:\Users\vasarinocode\Desktop\PYTHON\ML\ML_MUSIC\341018_340201_313191_project --method_name="nn" --batch_size=128 --lr=0.1 --max_iters=10
 
+ 

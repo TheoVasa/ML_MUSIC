@@ -1,6 +1,7 @@
 import numpy as np
 
 class PCA(object):
+
     """
         PCA dimensionality reduction object.
         Feel free to add more functions to this class if you need.
@@ -23,12 +24,19 @@ class PCA(object):
             The PCA class should have a variable defining the number of dimensions (d).
             You can either pass this as an arg or a kwarg.
         """
-        if "d" in kwargs:
-            self.d = kwargs["d"]
+        if "D" in kwargs:
+            self.D = kwargs["D"]
         elif len(args) >0 :
-            self.d = args[0]
+            self.D = args[0]
         else:
-            self.d = 1
+            self.D = 231
+
+        if "max_exp_var" in kwargs:
+            self.max_exp_var = kwargs["max_exp_var"]
+        elif len(args) >0 :
+            self.max_exp_var = args[0]
+        else:
+            self.max_exp_var = 0.9
 
 
     def find_principal_components(self, training_data):
@@ -60,13 +68,14 @@ class PCA(object):
         eigvals = np.flip(eigvals)
         eigvecs = np.flip(eigvecs,axis=1)
 
+        self.d = compute_dimension(eigvals, self.max_exp_var, self.D)
+
         # Create matrix W and the corresponding eigen values
         self.W = eigvecs[:,:self.d]
         eg = eigvals[:self.d]
 
-        
         # Compute the explained variance
-        exvar = np.sum(eg)/np.sum(eigvals)
+        exvar = compute_exvar(eigvals, self.d)
 
         return exvar*100
 
@@ -82,5 +91,24 @@ class PCA(object):
         """
         Xtilde=data-self.mean
         return Xtilde@self.W
+
+def compute_exvar(eigvals, d) :
+    return  np.sum(eigvals[:d])/np.sum(eigvals)
+
+def compute_dimension(eigvals, max_exp_var, big_d) :
+    print("Searching best dimension reduction d s.t explained variance is bigger that", max_exp_var)
+    d = big_d
+    exvar = compute_exvar(eigvals, d)
+    while(d > 1 and exvar > max_exp_var):
+        d = d - 1 
+        exvar = compute_exvar(eigvals, d)
+    d = d + 1 
+    exvar = compute_exvar(eigvals, d)
+    print("The best dimension reduction is d =", d, " with an explained variance of", exvar)
+    return d 
+
+
+
+  
         
 
