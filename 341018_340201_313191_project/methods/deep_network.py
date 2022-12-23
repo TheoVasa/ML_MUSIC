@@ -67,8 +67,8 @@ class Trainer(object):
         for ep in range(self.epochs):
             self.train_one_epoch(dataloader_train)
             pred = self.eval(dataloader_val).numpy()
-            val_labels = dataloader_val.dataset.labels 
-            print("EPOCH " + str(ep) + "/" + str(self.epochs) + " accuracy : " + str(accuracy_fn(pred, val_labels)))
+            #val_labels = dataloader_val.dataset.labels 
+            #print("EPOCH " + str(ep) + "/" + str(self.epochs) + " accuracy : " + str(accuracy_fn(pred, val_labels)))
 
             if (ep+1) % 2 == 0:
                 print("Reduce Learning rate")

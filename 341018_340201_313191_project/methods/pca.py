@@ -24,16 +24,26 @@ class PCA(object):
             The PCA class should have a variable defining the number of dimensions (d).
             You can either pass this as an arg or a kwarg.
         """
+        if "d" in kwargs:
+            self.d=kwargs["d"]
+            self.dpassed=True
+        elif len(args)>0:
+            self.d=args[0]
+            self.dpassed=True
+        else:
+            self.dpassed=False
+            self.d=1    
+
         if "D" in kwargs:
             self.D = kwargs["D"]
-        elif len(args) >0 :
-            self.D = args[0]
+        elif len(args)>1:
+            self.D = args[1]
         else:
             self.D = 231
 
         if "max_exp_var" in kwargs:
             self.max_exp_var = kwargs["max_exp_var"]
-        elif len(args) >0 :
+        elif len(args) >2 :
             self.max_exp_var = args[0]
         else:
             self.max_exp_var = 0.9
@@ -68,7 +78,9 @@ class PCA(object):
         eigvals = np.flip(eigvals)
         eigvecs = np.flip(eigvecs,axis=1)
 
-        self.d = compute_dimension(eigvals, self.max_exp_var, self.D)
+        if not self.dpassed:
+            self.d = compute_dimension(eigvals, self.max_exp_var, self.D)
+        
 
         # Create matrix W and the corresponding eigen values
         self.W = eigvecs[:,:self.d]

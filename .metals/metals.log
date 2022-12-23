@@ -573,3 +573,5 @@ INFO: Unsupported notification method: $/setTrace
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.lang.Thread.run(Thread.java:829)
 
+2022.12.22 10:38:05 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\assel\DOCUMENTS\13-EPFL BA3\Introduction to ML\Projet\ML_MUSIC\.metals\lsp.trace.json or C:\Users\assel\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.12.22 10:38:06 INFO  logging to file C:\Users\assel\DOCUMENTS\13-EPFL BA3\Introduction to ML\Projet\ML_MUSIC\.metals\metals.log

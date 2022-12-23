@@ -19,6 +19,7 @@ python test_ms2.py -p path_to_project_folder
 import re
 import sys
 import os
+os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
 import unittest
 import importlib
 from pathlib import Path
